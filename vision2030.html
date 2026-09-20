@@ -1,0 +1,1176 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title id="pageTitle">رؤية وطن 2030 | نحلم ونحقق</title>
+<meta id="pageDesc" name="description" content="مشروع مدرسي متكامل يحتفي باليوم الوطني السعودي، ويستعرض أبرز منجزات المملكة العربية السعودية وركائز رؤية 2030.">
+<meta name="theme-color" content="#0f172a">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f172a'/%3E%3Ctext x='32' y='40' font-size='22' font-family='Tahoma' fill='%2310b981' text-anchor='middle' font-weight='bold'%3EY10%3C/text%3E%3C/svg%3E">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;800;900&family=Readex+Pro:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&family=Noto+Sans+SC:wght@400;500;700;900&family=Noto+Nastaliq+Urdu:wght@400;600;700&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --bg:#0f172a;
+    --bg-alt:#0c1424;
+    --card:#1e293b;
+    --card-hi:#243349;
+    --emerald:#10b981;
+    --emerald-soft:rgba(16,185,129,.14);
+    --gold:#f59e0b;
+    --gold-soft:rgba(245,158,11,.14);
+    --text:#e7edf5;
+    --muted:#93a4bd;
+    --border:rgba(255,255,255,.09);
+    --danger:#f87171;
+    --radius:18px;
+    --radius-sm:12px;
+    --shadow:0 20px 50px -20px rgba(0,0,0,.55);
+    --maxw:1180px;
+    --ff-ar:'Tajawal','Readex Pro',sans-serif;
+    --ff-ur:'Tajawal','Noto Nastaliq Urdu',sans-serif;
+    --ff-en:'Inter','Roboto',sans-serif;
+    --ff-zh:'Noto Sans SC','Inter',sans-serif;
+    --ff-current:var(--ff-ar);
+  }
+  *,*::before,*::after{box-sizing:border-box}
+  html{scroll-behavior:smooth;scroll-padding-top:88px}
+  @media (prefers-reduced-motion:reduce){
+    html{scroll-behavior:auto}
+    *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}
+  }
+  body{
+    margin:0;background:
+      radial-gradient(1100px 620px at 15% -8%, rgba(16,185,129,.14), transparent 60%),
+      radial-gradient(900px 560px at 105% 10%, rgba(245,158,11,.10), transparent 55%),
+      var(--bg);
+    color:var(--text);font-family:var(--ff-current);line-height:1.7;
+    -webkit-font-smoothing:antialiased;min-height:100vh;
+  }
+  body[data-lang="ar"]{--ff-current:var(--ff-ar)}
+  body[data-lang="ur"]{--ff-current:var(--ff-ur)}
+  body[data-lang="en"]{--ff-current:var(--ff-en)}
+  body[data-lang="zh"]{--ff-current:var(--ff-zh)}
+  img,svg{display:block;max-width:100%}
+  a{color:inherit}
+  button{font-family:inherit}
+  .container{width:100%;max-width:var(--maxw);margin-inline:auto;padding-inline:20px}
+  .accent{background:linear-gradient(90deg,var(--emerald),var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+  /* ---------- Header ---------- */
+  .site-header{position:sticky;top:0;z-index:80;backdrop-filter:blur(14px) saturate(140%);-webkit-backdrop-filter:blur(14px) saturate(140%);background:rgba(15,23,42,.72);border-bottom:1px solid var(--border)}
+  .header-inner{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px}
+  .brand{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:800;font-size:17px;color:var(--text)}
+  .brand-mark{display:inline-flex;align-items:center;justify-content:center;width:38px;height:38px;border-radius:11px;background:linear-gradient(135deg,var(--emerald),#0a7a58);color:#04160f;font-weight:900;font-size:12px;letter-spacing:.02em}
+  .main-nav{display:flex;align-items:center;gap:4px}
+  .nav-link{padding:9px 14px;border-radius:999px;text-decoration:none;color:var(--muted);font-weight:600;font-size:14.5px;transition:color .15s ease,background .15s ease}
+  .nav-link:hover{color:var(--text)}
+  .nav-link.active{color:var(--emerald);background:var(--emerald-soft)}
+  .header-actions{display:flex;align-items:center;gap:10px}
+
+  .lang-switch{position:relative}
+  .lang-btn{display:inline-flex;align-items:center;gap:7px;padding:8px 12px;border-radius:999px;border:1px solid var(--border);background:var(--card);color:var(--text);font-weight:700;font-size:13.5px;cursor:pointer;transition:border-color .15s ease}
+  .lang-btn:hover{border-color:rgba(16,185,129,.45)}
+  .lang-btn svg{width:16px;height:16px;stroke:var(--emerald)}
+  .lang-menu{position:absolute;top:calc(100% + 8px);inset-inline-end:0;min-width:172px;background:var(--card);border:1px solid var(--border);border-radius:var(--radius-sm);box-shadow:var(--shadow);padding:6px;opacity:0;visibility:hidden;transform:translateY(-6px);transition:opacity .15s ease,transform .15s ease,visibility .15s}
+  .lang-switch.open .lang-menu{opacity:1;visibility:visible;transform:translateY(0)}
+  .lang-option{display:flex;align-items:center;justify-content:space-between;width:100%;padding:9px 10px;border:0;background:transparent;color:var(--text);font-size:14px;font-weight:600;border-radius:9px;cursor:pointer;text-align:start}
+  .lang-option:hover{background:rgba(255,255,255,.06)}
+  .lang-option[aria-current="true"]{color:var(--emerald)}
+  .lang-option small{color:var(--muted);font-weight:500;font-size:12px}
+
+  .nav-toggle{display:none;flex-direction:column;justify-content:center;gap:5px;width:38px;height:38px;border:1px solid var(--border);border-radius:10px;background:var(--card);cursor:pointer}
+  .nav-toggle span{display:block;width:16px;height:2px;background:var(--text);margin-inline:auto;transition:transform .2s ease,opacity .2s ease}
+  .nav-toggle[aria-expanded="true"] span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  .nav-toggle[aria-expanded="true"] span:nth-child(2){opacity:0}
+  .nav-toggle[aria-expanded="true"] span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+
+  @media (max-width:860px){
+    .main-nav{position:fixed;inset-inline:0;top:70px;flex-direction:column;align-items:stretch;gap:2px;background:rgba(12,20,36,.98);border-bottom:1px solid var(--border);padding:10px 16px;transform:translateY(-12px);opacity:0;visibility:hidden;transition:transform .2s ease,opacity .2s ease,visibility .2s}
+    .main-nav.open{transform:translateY(0);opacity:1;visibility:visible}
+    .nav-link{padding:12px 14px}
+    .nav-toggle{display:flex}
+  }
+
+  /* ---------- Layout helpers ---------- */
+  main{overflow-x:clip}
+  .section{padding-block:84px}
+  .section-alt{background:linear-gradient(180deg,transparent,rgba(255,255,255,.025) 20%,rgba(255,255,255,.025) 80%,transparent)}
+  .section-head{max-width:640px;margin-bottom:44px}
+  .section-tag{display:inline-flex;align-items:center;gap:8px;color:var(--emerald);font-weight:700;font-size:13.5px;margin-bottom:12px}
+  .section-tag::before{content:"";width:7px;height:7px;border-radius:50%;background:var(--gold)}
+  .section-head h2{font-size:clamp(26px,3.4vw,38px);margin:0 0 12px;font-weight:800;letter-spacing:-.01em}
+  .section-head p{color:var(--muted);font-size:16px;margin:0}
+
+  .reveal{opacity:0;transform:translateY(18px);transition:opacity .55s ease,transform .55s ease}
+  .reveal.is-visible{opacity:1;transform:none}
+
+  .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;padding:13px 24px;border-radius:999px;font-weight:700;font-size:15px;text-decoration:none;border:1px solid transparent;cursor:pointer;transition:transform .15s ease,filter .15s ease,background .15s ease,border-color .15s ease}
+  .btn:active{transform:scale(.97)}
+  .btn-primary{background:linear-gradient(90deg,var(--emerald),#0d9668);color:#03150d}
+  .btn-primary:hover{filter:brightness(1.08)}
+  .btn-ghost{background:transparent;border-color:var(--border);color:var(--text)}
+  .btn-ghost:hover{border-color:rgba(245,158,11,.5);color:var(--gold)}
+  .btn-outline{background:transparent;border-color:var(--emerald);color:var(--emerald)}
+  .btn-outline:hover{background:var(--emerald-soft)}
+  .btn:disabled{opacity:.45;cursor:not-allowed}
+  .btn-block{width:100%}
+
+  /* ---------- Hero ---------- */
+  .hero{padding-block:70px 40px}
+  .hero-card{max-width:820px}
+  .hero-badges{display:flex;flex-wrap:wrap;gap:10px;margin-bottom:22px}
+  .badge{display:inline-flex;align-items:center;gap:7px;padding:8px 14px;border-radius:999px;font-size:13px;font-weight:700}
+  .badge svg{width:14px;height:14px}
+  .badge-gold{background:var(--gold-soft);color:var(--gold);border:1px solid rgba(245,158,11,.3)}
+  .badge-outline{background:transparent;border:1px solid var(--border);color:var(--muted)}
+  .hero h1{font-size:clamp(36px,6vw,64px);line-height:1.12;margin:0 0 18px;font-weight:900;letter-spacing:-.02em}
+  .hero-sub{font-size:17.5px;color:var(--muted);max-width:640px;margin:0 0 34px}
+  .hero-stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-bottom:36px}
+  .stat{background:var(--card);border:1px solid var(--border);border-radius:var(--radius-sm);padding:16px 12px;text-align:center}
+  .stat-num{display:block;font-size:clamp(20px,2.6vw,28px);font-weight:900;background:linear-gradient(90deg,var(--emerald),var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .stat-label{display:block;margin-top:4px;font-size:12.5px;color:var(--muted);font-weight:600}
+  .hero-actions{display:flex;flex-wrap:wrap;gap:14px}
+  @media (max-width:640px){.hero-stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+  /* ---------- Achievement cards ---------- */
+  .cards-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:20px}
+  .card{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:26px;transition:border-color .2s ease,transform .2s ease}
+  .card:hover{border-color:rgba(16,185,129,.4);transform:translateY(-3px)}
+  .icon-wrap{width:48px;height:48px;border-radius:14px;display:flex;align-items:center;justify-content:center;background:var(--emerald-soft);color:var(--emerald);margin-bottom:16px}
+  .icon-wrap svg{width:24px;height:24px}
+  .icon-wrap-lg{width:56px;height:56px;background:var(--gold-soft);color:var(--gold)}
+  .icon-wrap-lg svg{width:28px;height:28px}
+  .card h3{margin:0 0 10px;font-size:18.5px;font-weight:800}
+  .card p{margin:0 0 16px;color:var(--muted);font-size:14.5px}
+  .tag-list{display:flex;flex-wrap:wrap;gap:8px}
+  .tag{font-size:12px;font-weight:700;color:var(--text);background:rgba(255,255,255,.06);border:1px solid var(--border);border-radius:999px;padding:5px 11px}
+
+  /* ---------- Pillars ---------- */
+  .pillars-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+  .pillar-card{position:relative;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:30px 26px}
+  .pillar-index{position:absolute;inset-inline-end:24px;top:22px;font-size:30px;font-weight:900;color:rgba(255,255,255,.08)}
+  .pillar-card h3{margin:14px 0 10px;font-size:19px;font-weight:800}
+  .pillar-card p{margin:0;color:var(--muted);font-size:14.5px}
+
+  /* ---------- Quiz ---------- */
+  .quiz-wrap{max-width:680px;background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:30px;box-shadow:var(--shadow)}
+  .quiz-progress-row{display:flex;align-items:center;justify-content:space-between;margin-bottom:10px;font-size:13px;font-weight:700;color:var(--muted)}
+  .quiz-score-live{color:var(--gold)}
+  .progress-track{height:8px;border-radius:999px;background:rgba(255,255,255,.08);overflow:hidden;margin-bottom:26px}
+  .progress-fill{height:100%;border-radius:999px;background:linear-gradient(90deg,var(--emerald),var(--gold));width:0%;transition:width .35s ease}
+  .quiz-question{font-size:19px;font-weight:800;margin:0 0 20px;line-height:1.5}
+  .quiz-options{display:grid;gap:12px;margin-bottom:22px}
+  .quiz-option{display:flex;align-items:center;gap:12px;text-align:start;width:100%;padding:14px 16px;border-radius:var(--radius-sm);border:1px solid var(--border);background:rgba(255,255,255,.03);color:var(--text);font-size:15px;font-weight:600;cursor:pointer;transition:border-color .15s ease,background .15s ease}
+  .quiz-option .opt-letter{flex:none;width:26px;height:26px;border-radius:50%;background:rgba(255,255,255,.08);display:flex;align-items:center;justify-content:center;font-size:12.5px;font-weight:800}
+  .quiz-option:hover:not(:disabled){border-color:rgba(16,185,129,.4)}
+  .quiz-option:disabled{cursor:default}
+  .quiz-option.correct{border-color:var(--emerald);background:var(--emerald-soft);color:#eafff5}
+  .quiz-option.correct .opt-letter{background:var(--emerald);color:#04160f}
+  .quiz-option.incorrect{border-color:var(--danger);background:rgba(248,113,113,.12)}
+  .quiz-option.incorrect .opt-letter{background:var(--danger);color:#2a0505}
+  .quiz-feedback{min-height:22px;font-weight:700;font-size:14px;margin-bottom:18px}
+  .quiz-feedback.state-correct{color:var(--emerald)}
+  .quiz-feedback.state-incorrect{color:var(--danger)}
+  .quiz-footer-row{display:flex;justify-content:flex-end}
+  .quiz-score-screen{display:none;text-align:center;padding-block:10px}
+  .quiz-score-screen.show{display:block}
+  .quiz-score-screen.show ~ #quizActive{display:none}
+  .score-badge{font-size:44px;margin-bottom:6px}
+  .score-num{font-size:44px;font-weight:900;background:linear-gradient(90deg,var(--emerald),var(--gold));-webkit-background-clip:text;background-clip:text;color:transparent;margin:0}
+  .score-grade{font-weight:800;font-size:18px;margin:6px 0 8px}
+  .score-sub{color:var(--muted);font-size:14.5px;margin:0 0 24px}
+
+  /* ---------- Greeting card ---------- */
+  .greeting-wrap{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
+  @media (max-width:860px){.greeting-wrap{grid-template-columns:1fr}}
+  .greeting-form{background:var(--card);border:1px solid var(--border);border-radius:var(--radius);padding:28px;display:flex;flex-direction:column;gap:14px}
+  .greeting-form label{font-weight:700;font-size:14px}
+  .greeting-form input[type="text"]{width:100%;padding:13px 15px;border-radius:var(--radius-sm);border:1px solid var(--border);background:rgba(255,255,255,.04);color:var(--text);font-size:15px;font-family:inherit;outline:none;transition:border-color .15s ease}
+  .greeting-form input[type="text"]:focus{border-color:var(--emerald)}
+  .form-hint{min-height:18px;font-size:13px;color:var(--emerald);margin:0}
+  .greeting-card{display:flex;flex-direction:column;gap:16px}
+  .greeting-preview{position:relative;aspect-ratio:5/3;border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:10px;padding:30px;background:
+      radial-gradient(circle at 20% 15%, rgba(16,185,129,.35), transparent 55%),
+      radial-gradient(circle at 85% 85%, rgba(245,158,11,.30), transparent 55%),
+      linear-gradient(160deg,#0c1424,#152238 60%,#0c1424);
+    border:1px solid var(--border);box-shadow:var(--shadow)}
+  .greeting-preview::before{content:"";position:absolute;inset:10px;border:1px solid rgba(255,255,255,.14);border-radius:12px;pointer-events:none}
+  .greeting-kicker{font-size:13px;letter-spacing:.02em;color:var(--gold);font-weight:700}
+  .greeting-name{font-size:clamp(24px,4vw,34px);font-weight:900;color:#fff}
+  .greeting-line{font-size:14.5px;color:var(--muted)}
+  .greeting-tagline{font-size:12.5px;color:var(--emerald);font-weight:700;margin-top:6px}
+  .greeting-badge{position:absolute;bottom:14px;inset-inline-end:14px;font-size:11px;font-weight:800;color:var(--muted);border:1px solid var(--border);border-radius:999px;padding:4px 10px}
+  .greeting-actions{display:flex;gap:12px;flex-wrap:wrap}
+  .greeting-actions .btn{flex:1}
+
+  /* ---------- Footer ---------- */
+  .site-footer{border-top:1px solid var(--border);padding-block:34px;background:var(--bg-alt)}
+  .footer-inner{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:18px}
+  .footer-brand{display:flex;align-items:center;gap:12px}
+  .y-badge{width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,var(--gold),#b3720a);display:flex;align-items:center;justify-content:center;font-weight:900;color:#1a1102;font-size:12px}
+  .footer-credit{margin:0;font-weight:700;font-size:14.5px}
+  .footer-copy{margin:2px 0 0;font-size:12.5px;color:var(--muted)}
+  .footer-note{margin:0;font-size:13px;color:var(--muted)}
+
+  .watermark{position:fixed;inset-inline-end:14px;bottom:14px;font-size:11px;font-weight:800;color:rgba(255,255,255,.14);letter-spacing:.05em;pointer-events:none;z-index:5}
+
+  ::selection{background:var(--emerald);color:#03150d}
+  :focus-visible{outline:2px solid var(--emerald);outline-offset:3px;border-radius:6px}
+</style>
+</head>
+<body data-lang="ar">
+
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="رؤية وطن 2030">
+        <span class="brand-mark">30</span>
+        <span class="brand-title" data-i18n="brand">رؤية وطن 2030</span>
+      </a>
+
+      <nav class="main-nav" id="mainNav">
+        <a href="#hero" class="nav-link active" data-i18n="nav.home">الرئيسية</a>
+        <a href="#achievements" class="nav-link" data-i18n="nav.achievements">الإنجازات</a>
+        <a href="#vision" class="nav-link" data-i18n="nav.vision">رؤية 2030</a>
+        <a href="#quiz" class="nav-link" data-i18n="nav.quiz">التحدي</a>
+        <a href="#greeting" class="nav-link" data-i18n="nav.card">بطاقتك</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="lang-switch" id="langSwitch">
+          <button class="lang-btn" id="langBtn" aria-haspopup="true" aria-expanded="false">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M2 12h20M12 2a15 15 0 0 1 0 20 15 15 0 0 1 0-20z"></path></svg>
+            <span id="langBtnLabel">العربية</span>
+          </button>
+          <div class="lang-menu" id="langMenu" role="menu"></div>
+        </div>
+        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="mainNav" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero -->
+    <section class="hero" id="hero">
+      <div class="container">
+        <div class="hero-card reveal">
+          <div class="hero-badges">
+            <span class="badge badge-gold">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l2.4 6.6L21 11l-6.6 2.4L12 20l-2.4-6.6L3 11l6.6-2.4z"></path></svg>
+              <span data-i18n="hero.badge1">مشروع مدرسي متكامل</span>
+            </span>
+            <span class="badge badge-outline" data-i18n="hero.badge2">اليوم الوطني السعودي · ٢٣ سبتمبر</span>
+          </div>
+
+          <h1 id="heroTitle"></h1>
+          <p class="hero-sub" data-i18n="hero.sub"></p>
+
+          <div class="hero-stats" id="heroStats"></div>
+
+          <div class="hero-actions">
+            <a href="#achievements" class="btn btn-primary" data-i18n="hero.ctaPrimary">استكشف الإنجازات</a>
+            <a href="#quiz" class="btn btn-ghost" data-i18n="hero.ctaGhost">اختبر معلوماتك</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Achievements -->
+    <section class="section" id="achievements">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-tag" data-i18n="achievements.tag">إنجازات المملكة</span>
+          <h2 data-i18n="achievements.title">منجزات تصنع المستقبل</h2>
+          <p data-i18n="achievements.sub"></p>
+        </div>
+        <div class="cards-grid" id="achievementsGrid"></div>
+      </div>
+    </section>
+
+    <!-- Vision 2030 Pillars -->
+    <section class="section section-alt" id="vision">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-tag" data-i18n="vision.tag">رؤية 2030</span>
+          <h2 data-i18n="vision.title">ركائز رؤية المملكة</h2>
+          <p data-i18n="vision.sub"></p>
+        </div>
+        <div class="pillars-grid" id="pillarsGrid"></div>
+      </div>
+    </section>
+
+    <!-- Quiz -->
+    <section class="section" id="quiz">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-tag" data-i18n="quiz.tag">اختبر نفسك</span>
+          <h2 data-i18n="quiz.title">تحدي رؤية 2030</h2>
+          <p data-i18n="quiz.sub"></p>
+        </div>
+
+        <div class="quiz-wrap reveal">
+          <div id="quizActive">
+            <div class="quiz-progress-row">
+              <span id="quizProgressLabel"></span>
+              <span class="quiz-score-live" id="quizScoreLive"></span>
+            </div>
+            <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+            <p class="quiz-question" id="quizQuestion"></p>
+            <div class="quiz-options" id="quizOptions"></div>
+            <p class="quiz-feedback" id="quizFeedback"></p>
+            <div class="quiz-footer-row">
+              <button type="button" class="btn btn-primary" id="quizNextBtn" style="display:none"></button>
+            </div>
+          </div>
+
+          <div class="quiz-score-screen" id="quizScoreScreen">
+            <div class="score-badge" id="scoreEmoji">🏆</div>
+            <p class="score-num" id="scoreNum">0/6</p>
+            <p class="score-grade" id="scoreGrade"></p>
+            <p class="score-sub" id="scoreSub"></p>
+            <button type="button" class="btn btn-outline" id="quizRestartBtn"></button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Greeting Card -->
+    <section class="section" id="greeting">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="section-tag" data-i18n="card.tag">بطاقتك الخاصة</span>
+          <h2 data-i18n="card.title">اصنع بطاقة تهنئة وطنية باسمك</h2>
+          <p data-i18n="card.sub"></p>
+        </div>
+
+        <div class="greeting-wrap reveal">
+          <form class="greeting-form" id="greetingForm" novalidate>
+            <label for="nameInput" data-i18n="card.label">اكتب اسمك هنا</label>
+            <input id="nameInput" name="name" type="text" maxlength="24" autocomplete="off">
+            <button type="submit" class="btn btn-primary btn-block" id="createCardBtn" data-i18n="card.buttonCreate">إنشاء بطاقتي</button>
+            <p class="form-hint" id="formHint"></p>
+          </form>
+
+          <div class="greeting-card">
+            <div class="greeting-preview" id="greetingPreview">
+              <span class="greeting-kicker" id="pvKicker"></span>
+              <strong class="greeting-name" id="pvName"></strong>
+              <span class="greeting-line" id="pvLine"></span>
+              <span class="greeting-tagline" id="pvTagline"></span>
+              <span class="greeting-badge">Y10</span>
+            </div>
+            <canvas id="greetingCanvas" width="1000" height="600" hidden></canvas>
+            <div class="greeting-actions">
+              <button type="button" class="btn btn-outline" id="downloadBtn" disabled data-i18n="card.download">تحميل البطاقة</button>
+              <button type="button" class="btn btn-outline" id="shareBtn" disabled data-i18n="card.share">مشاركة البطاقة</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="y-badge">Y10</span>
+        <div class="footer-text">
+          <p class="footer-credit" id="footerCredit"></p>
+          <p class="footer-copy" id="footerCopy"></p>
+        </div>
+      </div>
+      <p class="footer-note" id="footerNote"></p>
+    </div>
+  </footer>
+
+  <div class="watermark" aria-hidden="true">Y10</div>
+
+<script>
+(function(){
+"use strict";
+
+/* ============================================================
+   TRANSLATIONS
+   ============================================================ */
+var I18N = {
+  ar:{
+    dir:"rtl", nativeName:"العربية", pageTitle:"رؤية وطن 2030 | نحلم ونحقق",
+    pageDesc:"مشروع مدرسي متكامل يحتفي باليوم الوطني السعودي، ويستعرض أبرز منجزات المملكة العربية السعودية وركائز رؤية 2030.",
+    brand:"رؤية وطن 2030",
+    nav:{home:"الرئيسية",achievements:"الإنجازات",vision:"رؤية 2030",quiz:"التحدي",card:"بطاقتك"},
+    hero:{
+      badge1:"مشروع مدرسي متكامل", badge2:"اليوم الوطني السعودي · ٢٣ سبتمبر",
+      titleParts:["نحلم ","و","نحقق"],
+      sub:"احتفاءً باليوم الوطني السعودي، نستعرض في هذه الصفحة أبرز منجزات المملكة العربية السعودية، ومحطات رؤية 2030 التي تحوّل الطموح إلى واقع يلمسه كل مواطن ومواطنة.",
+      stats:[["2030","رؤية المملكة"],["6","محاور إنجاز"],["3","ركائز الرؤية"],["94","عامًا من الاتحاد"]],
+      ctaPrimary:"استكشف الإنجازات", ctaGhost:"اختبر معلوماتك"
+    },
+    achievements:{
+      tag:"إنجازات المملكة", title:"منجزات تصنع المستقبل",
+      sub:"من المدن المستقبلية إلى الذكاء الاصطناعي، إليك أبرز المحاور التي تعكس طموح المملكة العربية السعودية.",
+      cards:[
+        {icon:"neom", title:"نيوم", desc:"منطقة اقتصادية مستقبلية على ساحل البحر الأحمر، تجمع بين الابتكار والاستدامة لبناء نموذج معيشي جديد كليًا.", tags:["منطقة اقتصادية خاصة","طاقة متجددة","ابتكار حضري"]},
+        {icon:"line", title:"ذا لاين", desc:"مدينة خطية بلا شوارع أو سيارات، بواجهات مرآة تمتد عبر الصحراء لتعيد تعريف العيش الحضري المستدام.", tags:["بلا انبعاثات كربونية","تصميم عمودي","تنقل ذكي"]},
+        {icon:"digital", title:"التحول الرقمي والذكاء الاصطناعي", desc:"منظومة رقمية متكاملة تسهّل حياة المواطن، وتضع المملكة في طليعة الدول الرائدة في تبني تقنيات الذكاء الاصطناعي.", tags:["أبشر","توكلنا","سدايا"]},
+        {icon:"space", title:"استكشاف الفضاء", desc:"خطوات نوعية في مجال الفضاء ودعم البحث العلمي، ضمن رؤية طموحة لبناء مستقبل قائم على المعرفة والابتكار.", tags:["رواد الفضاء السعوديون","الأقمار الصناعية","البحث العلمي"]},
+        {icon:"green", title:"السعودية الخضراء", desc:"التزام بيئي واسع يشمل زراعة عشرة مليارات شجرة، وخفض الانبعاثات الكربونية، وحماية الموارد الطبيعية للأجيال القادمة.", tags:["طاقة متجددة","مناطق محمية","خفض الكربون"]},
+        {icon:"murabba", title:"مربع الرياض الجديد", desc:"أكبر تطوير حضري وسط مدينة في العالم، يتوسطه \"المكعب\" الأيقوني ليصنع قلبًا جديدًا لعاصمة المملكة.", tags:["المكعب","وسط مدينة جديد","تطوير عمراني عملاق"]}
+      ]
+    },
+    vision:{
+      tag:"رؤية 2030", title:"ركائز رؤية المملكة",
+      sub:"ثلاث ركائز أساسية تشكّل خارطة الطريق نحو مستقبل أكثر ازدهارًا وطموحًا للمملكة العربية السعودية.",
+      pillars:[
+        {title:"مجتمع حيوي", desc:"تعزيز الهوية الوطنية وجودة الحياة، ودعم الرياضة والثقافة والترفيه لبناء مجتمع متكافل وسعيد يفتخر بانتمائه."},
+        {title:"اقتصاد مزدهر", desc:"تنويع مصادر الدخل، وتمكين القطاع الخاص، وجذب الاستثمارات المحلية والعالمية لبناء اقتصاد قوي ومستدام."},
+        {title:"وطن طموح", desc:"حوكمة فاعلة وشفافة، ومسؤولية مجتمعية راسخة، ترسّخ مكانة المملكة وتدعم تطلعاتها الطموحة إقليميًا وعالميًا."}
+      ]
+    },
+    quiz:{
+      tag:"اختبر نفسك", title:"تحدي رؤية 2030",
+      sub:"كم تعرف عن إنجازات المملكة ورؤية 2030؟ أجب عن الأسئلة التالية واكتشف نتيجتك.",
+      questionLabel:"سؤال {n} من {t}", correct:"إجابة صحيحة!", incorrect:"إجابة غير صحيحة، حاول مرة أخرى في المرة القادمة",
+      next:"السؤال التالي", finish:"عرض النتيجة", restart:"أعد المحاولة",
+      scoreTitle:"نتيجتك النهائية", scoreSub:"لقد أجبت بشكل صحيح عن {score} من {total} أسئلة",
+      grades:[[90,"سفير رؤية 2030","🏆"],[60,"مواطن مطّلع","🥈"],[0,"ابدأ رحلة الاكتشاف","🌱"]],
+      questions:[
+        {q:"في أي عام تم إطلاق رؤية السعودية 2030؟", options:["2016","2018","2020","2012"], correct:0},
+        {q:"ما اسم المدينة الخطية ضمن مشروع نيوم؟", options:["ذا لاين","القدية","الدرعية","مشروع البحر الأحمر"], correct:0},
+        {q:"ما الهيئة المسؤولة عن استراتيجية البيانات والذكاء الاصطناعي في المملكة؟", options:["سدايا (SDAIA)","نيوم","صندوق الاستثمارات العامة","روشن"], correct:0},
+        {q:"من هي أول امرأة سعودية تسافر إلى الفضاء؟", options:["ريانة برناوي","سارة القحطاني","نورة الفياض","لم يحدث ذلك بعد"], correct:0},
+        {q:"كم عدد الأشجار التي تستهدف مبادرة السعودية الخضراء زراعتها؟", options:["10 مليارات شجرة","مليار شجرة","100 مليون شجرة","50 مليار شجرة"], correct:0},
+        {q:"ما اسم المعلَم المكعّب الشكل في قلب مشروع مربع الرياض الجديد؟", options:["المكعب","ذا لاين","قبة القدية","برج الدرعية"], correct:0}
+      ]
+    },
+    card:{
+      tag:"بطاقتك الخاصة", title:"اصنع بطاقة تهنئة وطنية باسمك",
+      sub:"اكتب اسمك أدناه، وسنجهّز لك بطاقة تهنئة بمناسبة اليوم الوطني السعودي يمكنك حفظها ومشاركتها فورًا.",
+      label:"اكتب اسمك هنا", placeholder:"مثال: سلطان", buttonCreate:"إنشاء بطاقتي التهنئية",
+      hintEmpty:"يرجى كتابة اسمك أولًا", hintReady:"بطاقتك جاهزة — يمكنك تحميلها أو مشاركتها",
+      kicker:"كل عام وأنتم بخير", defaultName:"صاحب/ة البطاقة", line:"بمناسبة اليوم الوطني السعودي",
+      tagline:"نحلم ونحقق — رؤية وطن 2030", download:"تحميل البطاقة", share:"مشاركة البطاقة",
+      shareFallback:"المشاركة غير مدعومة هنا، تم تحميل الصورة بدلاً من ذلك", filename:"بطاقة-اليوم-الوطني"
+    },
+    footer:{credit:"تصميم وتطوير: H\\N | Y10", copy:"© جميع الحقوق محفوظة — رؤية وطن 2030", note:"صُنع بفخر احتفاءً باليوم الوطني السعودي 🇸🇦"}
+  },
+
+  en:{
+    dir:"ltr", nativeName:"English", pageTitle:"Vision of a Nation 2030 | We Dream, We Deliver",
+    pageDesc:"A complete school project celebrating Saudi National Day, showcasing the Kingdom's landmark achievements and the pillars of Vision 2030.",
+    brand:"Vision of a Nation 2030",
+    nav:{home:"Home",achievements:"Achievements",vision:"Vision 2030",quiz:"Challenge",card:"Your Card"},
+    hero:{
+      badge1:"A Complete National Day Project", badge2:"Saudi National Day · September 23",
+      titleParts:["We Dream, We ","Deliver",""],
+      sub:"Celebrating Saudi National Day, this page showcases the Kingdom's landmark achievements and the milestones of Vision 2030 — turning ambition into a reality every citizen can feel.",
+      stats:[["2030","The Kingdom's Vision"],["6","Achievement Pillars"],["3","Vision Pillars"],["94","Years of Unity"]],
+      ctaPrimary:"Explore Achievements", ctaGhost:"Test Your Knowledge"
+    },
+    achievements:{
+      tag:"National Achievements", title:"Milestones Shaping the Future",
+      sub:"From futuristic cities to artificial intelligence, explore the pillars that reflect the Kingdom's ambition.",
+      cards:[
+        {icon:"neom", title:"NEOM", desc:"A futuristic economic zone on the Red Sea coast, blending innovation and sustainability to build an entirely new model of living.", tags:["Special Economic Zone","Renewable Energy","Urban Innovation"]},
+        {icon:"line", title:"The Line", desc:"A car-free, street-free linear city with mirrored facades stretching across the desert, redefining sustainable urban living.", tags:["Zero Carbon","Vertical Living","Smart Mobility"]},
+        {icon:"digital", title:"Digital Transformation & AI", desc:"An integrated digital ecosystem that simplifies citizens' lives and positions the Kingdom at the forefront of artificial intelligence.", tags:["Absher","Tawakkalna","SDAIA"]},
+        {icon:"space", title:"Space Exploration", desc:"Landmark steps in the space sector and scientific research, part of an ambitious vision for a knowledge-driven future.", tags:["Saudi Astronauts","Satellites","Scientific Research"]},
+        {icon:"green", title:"Saudi Green Initiative", desc:"A sweeping environmental commitment, including planting ten billion trees, cutting carbon emissions, and protecting natural resources.", tags:["Renewable Energy","Protected Areas","Carbon Reduction"]},
+        {icon:"murabba", title:"New Murabba", desc:"The world's largest downtown development, centered on the iconic Mukaab, creating a new heart for the Kingdom's capital.", tags:["The Mukaab","New Downtown","Giga Urban Development"]}
+      ]
+    },
+    vision:{
+      tag:"Vision 2030", title:"Pillars of the Kingdom's Vision",
+      sub:"Three core pillars forming the roadmap toward a more prosperous and ambitious future for Saudi Arabia.",
+      pillars:[
+        {title:"A Vibrant Society", desc:"Strengthening national identity and quality of life, supporting sports, culture and entertainment to build a caring, thriving community."},
+        {title:"A Thriving Economy", desc:"Diversifying income sources, empowering the private sector, and attracting local and global investment to build a strong, sustainable economy."},
+        {title:"An Ambitious Nation", desc:"Effective, transparent governance and firm social responsibility, reinforcing the Kingdom's standing regionally and globally."}
+      ]
+    },
+    quiz:{
+      tag:"Test Yourself", title:"The Vision 2030 Challenge",
+      sub:"How much do you know about the Kingdom's achievements and Vision 2030? Answer the questions below and see your score.",
+      questionLabel:"Question {n} of {t}", correct:"Correct answer!", incorrect:"Not quite — try again next time",
+      next:"Next Question", finish:"See Results", restart:"Try Again",
+      scoreTitle:"Your Final Score", scoreSub:"You answered {score} out of {total} questions correctly",
+      grades:[[90,"Vision 2030 Ambassador","🏆"],[60,"Well-Informed Citizen","🥈"],[0,"Start Your Discovery Journey","🌱"]],
+      questions:[
+        {q:"In which year was Saudi Vision 2030 launched?", options:["2016","2018","2020","2012"], correct:0},
+        {q:"What is the name of NEOM's linear city?", options:["The Line","Qiddiya","Diriyah","The Red Sea Project"], correct:0},
+        {q:"Which authority leads Saudi Arabia's data and AI strategy?", options:["SDAIA","NEOM","PIF","ROSHN"], correct:0},
+        {q:"Who was the first Saudi woman to travel to space?", options:["Rayyanah Barnawi","Sarah Al-Qahtani","Noura Al-Fayadh","It hasn't happened yet"], correct:0},
+        {q:"How many trees does the Saudi Green Initiative aim to plant?", options:["10 billion trees","1 billion trees","100 million trees","50 billion trees"], correct:0},
+        {q:"What is the giant cube-shaped landmark at the heart of New Murabba called?", options:["The Mukaab","The Line","Qiddiya Dome","Diriyah Tower"], correct:0}
+      ]
+    },
+    card:{
+      tag:"Your Card", title:"Create Your Own National Day Card",
+      sub:"Enter your name below and we'll craft a Saudi National Day greeting card you can save and share instantly.",
+      label:"Enter your name", placeholder:"e.g. Sultan", buttonCreate:"Create My Card",
+      hintEmpty:"Please enter your name first", hintReady:"Your card is ready — download or share it",
+      kicker:"Happy National Day", defaultName:"Card Holder", line:"On the occasion of Saudi National Day",
+      tagline:"We Dream, We Deliver — Vision 2030", download:"Download Card", share:"Share Card",
+      shareFallback:"Sharing isn't supported here, so the image was downloaded instead", filename:"national-day-card"
+    },
+    footer:{credit:"Designed & Developed by H\\N | Y10", copy:"© All rights reserved — Vision of a Nation 2030", note:"Proudly made to celebrate Saudi National Day 🇸🇦"}
+  },
+
+  ur:{
+    dir:"rtl", nativeName:"اردو", pageTitle:"وژن آف اے نیشن 2030 | ہم خواب دیکھتے ہیں، ہم پورا کرتے ہیں",
+    pageDesc:"سعودی قومی دن کے موقع پر ایک مکمل اسکول پراجیکٹ، جو مملکت کی نمایاں کامیابیوں اور وژن 2030 کے ستونوں کو پیش کرتا ہے۔",
+    brand:"وژن آف اے نیشن 2030",
+    nav:{home:"مرکزی صفحہ",achievements:"کامیابیاں",vision:"وژن 2030",quiz:"چیلنج",card:"آپ کا کارڈ"},
+    hero:{
+      badge1:"ایک مکمل قومی دن پراجیکٹ", badge2:"سعودی قومی دن · 23 ستمبر",
+      titleParts:["ہم خواب دیکھتے ہیں، ہم ","پورا کرتے ہیں",""],
+      sub:"سعودی قومی دن کی مناسبت سے، یہ صفحہ مملکت کی نمایاں کامیابیوں اور وژن 2030 کے سنگ ہائے میل پیش کرتا ہے، جو خواب کو ہر شہری کے لیے محسوس ہونے والی حقیقت میں بدل رہے ہیں۔",
+      stats:[["2030","مملکت کا وژن"],["6","کامیابی کے شعبے"],["3","وژن کے ستون"],["94","اتحاد کے برس"]],
+      ctaPrimary:"کامیابیاں دیکھیں", ctaGhost:"اپنی معلومات آزمائیں"
+    },
+    achievements:{
+      tag:"قومی کامیابیاں", title:"مستقبل کی تعمیر کرنے والے سنگ میل",
+      sub:"مستقبل کے شہروں سے لے کر مصنوعی ذہانت تک، مملکت کے عزائم کی عکاسی کرنے والے اہم شعبے ملاحظہ کریں۔",
+      cards:[
+        {icon:"neom", title:"نیوم", desc:"بحیرہ احمر کے ساحل پر ایک مستقبل کا اقتصادی زون، جو جدت اور پائیداری کو یکجا کر کے زندگی کا بالکل نیا نمونہ تشکیل دیتا ہے۔", tags:["خصوصی اقتصادی زون","قابل تجدید توانائی","شہری جدت"]},
+        {icon:"line", title:"دی لائن", desc:"بغیر سڑکوں اور گاڑیوں کے ایک لکیری شہر، جس کی آئینہ نما عمارتیں صحرا میں پھیلی ہوئی ہیں اور پائیدار شہری زندگی کی نئی تعریف کرتی ہیں۔", tags:["کاربن سے پاک","عمودی طرزِ زندگی","ذہین نقل و حمل"]},
+        {icon:"digital", title:"ڈیجیٹل تبدیلی اور مصنوعی ذہانت", desc:"ایک مربوط ڈیجیٹل نظام جو شہریوں کی زندگی آسان بناتا ہے اور مملکت کو مصنوعی ذہانت میں پیش پیش رکھتا ہے۔", tags:["ابشر","توکلنا","سدایا"]},
+        {icon:"space", title:"خلائی تحقیق", desc:"خلائی شعبے اور سائنسی تحقیق میں نمایاں پیش رفت، علم پر مبنی مستقبل کے عزائم کا حصہ۔", tags:["سعودی خلاباز","مصنوعی سیارے","سائنسی تحقیق"]},
+        {icon:"green", title:"سبز سعودی مہم", desc:"ایک وسیع ماحولیاتی عزم جس میں دس ارب درخت لگانا، اخراج کم کرنا اور قدرتی وسائل کا تحفظ شامل ہے۔", tags:["قابل تجدید توانائی","محفوظ علاقے","کاربن میں کمی"]},
+        {icon:"murabba", title:"نیا مربع", desc:"دنیا کا سب سے بڑا مرکزی شہری منصوبہ، جس کے مرکز میں مشہور \"المکعب\" مملکت کے دارالحکومت کا نیا مرکز تشکیل دیتا ہے۔", tags:["المکعب","نیا شہری مرکز","بڑے پیمانے کی تعمیر"]}
+      ]
+    },
+    vision:{
+      tag:"وژن 2030", title:"مملکت کے وژن کے ستون",
+      sub:"تین بنیادی ستون جو ایک خوشحال اور پرعزم مستقبل کی طرف روڈ میپ تشکیل دیتے ہیں۔",
+      pillars:[
+        {title:"متحرک معاشرہ", desc:"قومی شناخت اور معیارِ زندگی کو مضبوط بنانا، کھیل، ثقافت اور تفریح کی حمایت کر کے ایک متحد اور خوشحال معاشرہ تشکیل دینا۔"},
+        {title:"خوشحال معیشت", desc:"آمدنی کے ذرائع میں تنوع، نجی شعبے کو بااختیار بنانا، اور سرمایہ کاری کو راغب کر کے مضبوط و پائیدار معیشت کی تعمیر۔"},
+        {title:"پرعزم وطن", desc:"مؤثر اور شفاف حکمرانی، اور مضبوط سماجی ذمہ داری، جو دنیا بھر میں مملکت کے مقام کو مستحکم کرتی ہے۔"}
+      ]
+    },
+    quiz:{
+      tag:"خود کو آزمائیں", title:"وژن 2030 چیلنج",
+      sub:"آپ مملکت کی کامیابیوں اور وژن 2030 کے بارے میں کتنا جانتے ہیں؟ نیچے دیے گئے سوالات کے جواب دیں اور اپنا نتیجہ دیکھیں۔",
+      questionLabel:"سوال {n} از {t}", correct:"درست جواب!", incorrect:"غلط جواب — اگلی بار پھر کوشش کریں",
+      next:"اگلا سوال", finish:"نتیجہ دیکھیں", restart:"دوبارہ کوشش کریں",
+      scoreTitle:"آپ کا حتمی نتیجہ", scoreSub:"آپ نے {total} میں سے {score} سوالات کے درست جواب دیے",
+      grades:[[90,"وژن 2030 سفیر","🏆"],[60,"باخبر شہری","🥈"],[0,"اپنا سفر شروع کریں","🌱"]],
+      questions:[
+        {q:"سعودی وژن 2030 کس سال شروع کیا گیا؟", options:["2016","2018","2020","2012"], correct:0},
+        {q:"نیوم کے لکیری شہر کا نام کیا ہے؟", options:["دی لائن","القدیہ","الدرعیہ","ریڈ سی پراجیکٹ"], correct:0},
+        {q:"مملکت کی ڈیٹا اور مصنوعی ذہانت کی حکمت عملی کس ادارے کے تحت ہے؟", options:["سدایا (SDAIA)","نیوم","پی آئی ایف","روشن"], correct:0},
+        {q:"خلا میں سفر کرنے والی پہلی سعودی خاتون کون تھیں؟", options:["ریانہ برناوی","سارہ القحطانی","نورہ الفیاض","ابھی تک ایسا نہیں ہوا"], correct:0},
+        {q:"سبز سعودی مہم کے تحت کتنے درخت لگانے کا ہدف ہے؟", options:["10 ارب درخت","1 ارب درخت","10 کروڑ درخت","50 ارب درخت"], correct:0},
+        {q:"نئے مربع کے مرکز میں موجود مکعب نما یادگار کا نام کیا ہے؟", options:["المکعب","دی لائن","القدیہ ڈوم","الدرعیہ ٹاور"], correct:0}
+      ]
+    },
+    card:{
+      tag:"آپ کا کارڈ", title:"اپنے نام سے قومی دن کا کارڈ بنائیں",
+      sub:"نیچے اپنا نام درج کریں، ہم آپ کے لیے ایک سعودی قومی دن کا مبارکباد کارڈ تیار کریں گے جسے آپ فوراً محفوظ اور شیئر کر سکتے ہیں۔",
+      label:"اپنا نام لکھیں", placeholder:"مثال: سلطان", buttonCreate:"میرا کارڈ بنائیں",
+      hintEmpty:"براہ کرم پہلے اپنا نام لکھیں", hintReady:"آپ کا کارڈ تیار ہے — اسے ڈاؤن لوڈ یا شیئر کریں",
+      kicker:"قومی دن مبارک ہو", defaultName:"کارڈ کا مالک", line:"سعودی قومی دن کی مناسبت سے",
+      tagline:"ہم خواب دیکھتے ہیں، ہم پورا کرتے ہیں — وژن 2030", download:"کارڈ ڈاؤن لوڈ کریں", share:"کارڈ شیئر کریں",
+      shareFallback:"یہاں شیئرنگ دستیاب نہیں، اس لیے تصویر ڈاؤن لوڈ کر دی گئی", filename:"قومی-دن-کارڈ"
+    },
+    footer:{credit:"ڈیزائن اور تیاری: H\\N | Y10", copy:"© جملہ حقوق محفوظ ہیں — وژن آف اے نیشن 2030", note:"سعودی قومی دن کے جشن کے لیے فخر سے تیار کیا گیا 🇸🇦"}
+  },
+
+  zh:{
+    dir:"ltr", nativeName:"中文", pageTitle:"国家愿景2030 | 我们敢于梦想，成就未来",
+    pageDesc:"一个完整的国庆献礼学校项目，展示沙特王国的重要成就与2030愿景的支柱。",
+    brand:"国家愿景2030",
+    nav:{home:"首页",achievements:"成就",vision:"2030愿景",quiz:"挑战",card:"你的贺卡"},
+    hero:{
+      badge1:"完整国庆献礼企划", badge2:"沙特国庆日 · 9月23日",
+      titleParts:["我们敢于","梦想","，成就未来"],
+      sub:"值此沙特国庆日之际，本页面呈现王国的重要成就与2030愿景的里程碑，将雄心转化为每位公民都能感受到的现实。",
+      stats:[["2030","王国愿景"],["6","成就领域"],["3","愿景支柱"],["94","团结岁月"]],
+      ctaPrimary:"探索成就", ctaGhost:"测试你的知识"
+    },
+    achievements:{
+      tag:"国家成就", title:"塑造未来的里程碑",
+      sub:"从未来城市到人工智能，一览体现王国雄心的核心领域。",
+      cards:[
+        {icon:"neom", title:"新未来城 NEOM", desc:"位于红海沿岸的未来经济区，融合创新与可持续发展，打造全新的生活方式。", tags:["特别经济区","可再生能源","城市创新"]},
+        {icon:"line", title:"直线之城 THE LINE", desc:"一座没有街道和汽车的线性城市，镜面外墙延伸穿越沙漠，重新定义可持续城市生活。", tags:["零碳排放","垂直生活","智慧出行"]},
+        {icon:"digital", title:"数字化转型与人工智能", desc:"一体化数字生态系统，简化公民生活，使王国在人工智能领域处于领先地位。", tags:["Absher","Tawakkalna","SDAIA"]},
+        {icon:"space", title:"太空探索", desc:"太空领域与科学研究的重要突破，是以知识驱动未来的宏伟愿景的一部分。", tags:["沙特宇航员","人造卫星","科学研究"]},
+        {icon:"green", title:"沙特绿色倡议", desc:"广泛的环保承诺，包括种植一百亿棵树、减少碳排放并保护自然资源。", tags:["可再生能源","自然保护区","碳减排"]},
+        {icon:"murabba", title:"新穆拉巴 New Murabba", desc:"世界最大的市中心开发项目，以标志性建筑“穆卡布”为核心，打造王国首都的新中心。", tags:["穆卡布立方体","新城市中心","超大型城市开发"]}
+      ]
+    },
+    vision:{
+      tag:"2030愿景", title:"王国愿景的三大支柱",
+      sub:"三大核心支柱构成通往更繁荣、更具雄心未来的路线图。",
+      pillars:[
+        {title:"充满活力的社会", desc:"增强国家认同感与生活质量，支持体育、文化与娱乐事业，打造团结幸福的社会。"},
+        {title:"蓬勃发展的经济", desc:"实现收入来源多元化，扶持私营部门发展，吸引本地与全球投资，建设强大可持续的经济体系。"},
+        {title:"雄心壮志的国家", desc:"高效透明的治理与坚实的社会责任，巩固王国在地区与全球的地位。"}
+      ]
+    },
+    quiz:{
+      tag:"测试自己", title:"2030愿景挑战",
+      sub:"你对王国的成就与2030愿景了解多少？回答以下问题，看看你的得分。",
+      questionLabel:"第{n}题，共{t}题", correct:"回答正确！", incorrect:"回答错误，下次再接再厉",
+      next:"下一题", finish:"查看结果", restart:"重新开始",
+      scoreTitle:"你的最终得分", scoreSub:"你在{total}题中答对了{score}题",
+      grades:[[90,"2030愿景大使","🏆"],[60,"知识渊博的公民","🥈"],[0,"开启你的探索之旅","🌱"]],
+      questions:[
+        {q:"沙特2030愿景是哪一年推出的？", options:["2016年","2018年","2020年","2012年"], correct:0},
+        {q:"NEOM中的线性城市项目叫什么名字？", options:["直线之城 THE LINE","盖迪亚","德拉伊耶","红海项目"], correct:0},
+        {q:"负责王国数据与人工智能战略的机构是？", options:["SDAIA数据与人工智能局","NEOM新未来城","公共投资基金","ROSHN"], correct:0},
+        {q:"谁是第一位进入太空的沙特女性？", options:["蕾雅娜·巴尔纳维","萨拉·卡塔尼","努拉·法亚德","目前还没有"], correct:0},
+        {q:"沙特绿色倡议计划种植多少棵树？", options:["一百亿棵","十亿棵","一亿棵","五百亿棵"], correct:0},
+        {q:"新穆拉巴中心的立方体地标叫什么？", options:["穆卡布 The Mukaab","直线之城","盖迪亚穹顶","德拉伊耶塔"], correct:0}
+      ]
+    },
+    card:{
+      tag:"你的贺卡", title:"制作专属于你的国庆贺卡",
+      sub:"在下方输入你的名字，我们将为你制作一张可立即保存和分享的沙特国庆贺卡。",
+      label:"输入你的名字", placeholder:"例如：Sultan", buttonCreate:"生成我的贺卡",
+      hintEmpty:"请先输入你的名字", hintReady:"你的贺卡已生成 — 可以下载或分享",
+      kicker:"国庆快乐", defaultName:"贺卡主人", line:"值此沙特国庆日之际",
+      tagline:"我们敢于梦想，成就未来 — 2030愿景", download:"下载贺卡", share:"分享贺卡",
+      shareFallback:"此设备不支持分享，已为你下载图片", filename:"国庆贺卡"
+    },
+    footer:{credit:"设计与开发：H\\N | Y10", copy:"© 版权所有 — 国家愿景2030", note:"自豪地为庆祝沙特国庆日而制作 🇸🇦"}
+  }
+};
+
+var LANG_ORDER = ["ar","en","ur","zh"];
+var currentLang = "ar";
+
+var ICONS = {
+  neom:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V9l4-4 4 4v12"/><path d="M13 21V13h6v8"/><path d="M9 9h.01M9 13h.01M9 17h.01"/></svg>',
+  line:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20 20 4"/><rect x="3" y="15" width="6" height="6" rx="1"/><rect x="15" y="3" width="6" height="6" rx="1"/></svg>',
+  digital:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="6" width="12" height="12" rx="2"/><path d="M9 2v3M15 2v3M9 19v3M15 19v3M2 9h3M2 15h3M19 9h3M19 15h3"/></svg>',
+  space:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c2.5 3 4 6.5 4 10a4 4 0 0 1-8 0c0-3.5 1.5-7 4-10z"/><path d="M8.5 15.5 6 21l4-1.5M15.5 15.5 18 21l-4-1.5"/></svg>',
+  green:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21C7 17 4 13.5 4 9.5A5.5 5.5 0 0 1 12 5a5.5 5.5 0 0 1 8 4.5c0 4-3 7.5-8 11.5z"/><path d="M12 12v5"/></svg>',
+  murabba:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="5" width="14" height="14" rx="2"/><rect x="9" y="9" width="6" height="6" rx="1"/></svg>'
+};
+var PILLAR_ICONS = [
+  '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20.8 4.6a5 5 0 0 0-7.1 0L12 6.3l-1.7-1.7a5 5 0 1 0-7.1 7.1L12 20.3l8.8-8.6a5 5 0 0 0 0-7.1z"/></svg>',
+  '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 17l6-6 4 4 8-8"/><path d="M15 5h6v6"/></svg>',
+  '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 21V9l8-6 8 6v12"/><path d="M9 21v-6h6v6"/></svg>'
+];
+
+/* ============================================================
+   UTILITIES
+   ============================================================ */
+function t(lang){ return I18N[lang]; }
+function fmt(str, map){
+  return str.replace(/\{(\w+)\}/g, function(_, k){ return map[k] !== undefined ? map[k] : ""; });
+}
+function el(tag, cls, html){
+  var e = document.createElement(tag);
+  if(cls) e.className = cls;
+  if(html !== undefined) e.innerHTML = html;
+  return e;
+}
+
+/* ============================================================
+   LANGUAGE SWITCHER UI
+   ============================================================ */
+var langSwitch = document.getElementById("langSwitch");
+var langBtn = document.getElementById("langBtn");
+var langBtnLabel = document.getElementById("langBtnLabel");
+var langMenu = document.getElementById("langMenu");
+
+function buildLangMenu(){
+  langMenu.innerHTML = "";
+  LANG_ORDER.forEach(function(code){
+    var opt = el("button", "lang-option");
+    opt.type = "button";
+    opt.setAttribute("role","menuitem");
+    opt.setAttribute("data-lang-opt", code);
+    opt.innerHTML = "<span>" + t(code).nativeName + "</span><small>" + code.toUpperCase() + "</small>";
+    opt.addEventListener("click", function(){
+      setLanguage(code);
+      closeLangMenu();
+      langBtn.focus();
+    });
+    langMenu.appendChild(opt);
+  });
+}
+function openLangMenu(){ langSwitch.classList.add("open"); langBtn.setAttribute("aria-expanded","true"); }
+function closeLangMenu(){ langSwitch.classList.remove("open"); langBtn.setAttribute("aria-expanded","false"); }
+langBtn.addEventListener("click", function(){
+  langSwitch.classList.contains("open") ? closeLangMenu() : openLangMenu();
+});
+document.addEventListener("click", function(e){
+  if(!langSwitch.contains(e.target)) closeLangMenu();
+});
+document.addEventListener("keydown", function(e){
+  if(e.key === "Escape") closeLangMenu();
+});
+
+/* ============================================================
+   MOBILE NAV
+   ============================================================ */
+var navToggle = document.getElementById("navToggle");
+var mainNav = document.getElementById("mainNav");
+navToggle.addEventListener("click", function(){
+  var open = mainNav.classList.toggle("open");
+  navToggle.setAttribute("aria-expanded", open ? "true" : "false");
+});
+mainNav.querySelectorAll(".nav-link").forEach(function(link){
+  link.addEventListener("click", function(){
+    mainNav.classList.remove("open");
+    navToggle.setAttribute("aria-expanded","false");
+  });
+});
+
+/* ============================================================
+   RENDER: static i18n text nodes
+   ============================================================ */
+function applySimpleI18n(lang){
+  var data = t(lang);
+  document.querySelectorAll("[data-i18n]").forEach(function(node){
+    var path = node.getAttribute("data-i18n").split(".");
+    var val = data;
+    for(var i=0;i<path.length;i++){ val = val ? val[path[i]] : undefined; }
+    if(typeof val === "string") node.textContent = val;
+  });
+}
+
+/* ============================================================
+   RENDER: Hero
+   ============================================================ */
+function renderHero(lang){
+  var d = t(lang).hero;
+  var h1 = document.getElementById("heroTitle");
+  h1.innerHTML = d.titleParts[0] + '<span class="accent">' + d.titleParts[1] + '</span>' + d.titleParts[2];
+  var wrap = document.getElementById("heroStats");
+  wrap.innerHTML = "";
+  d.stats.forEach(function(s){
+    var box = el("div","stat");
+    box.innerHTML = '<span class="stat-num">'+s[0]+'</span><span class="stat-label">'+s[1]+'</span>';
+    wrap.appendChild(box);
+  });
+}
+
+/* ============================================================
+   RENDER: Achievement cards
+   ============================================================ */
+function renderAchievements(lang){
+  var d = t(lang).achievements;
+  var grid = document.getElementById("achievementsGrid");
+  grid.innerHTML = "";
+  d.cards.forEach(function(c, i){
+    var card = el("article","card reveal is-visible");
+    var tagsHtml = c.tags.map(function(tag){ return '<span class="tag">'+tag+'</span>'; }).join("");
+    card.innerHTML =
+      '<div class="icon-wrap">'+ (ICONS[c.icon] || "") +'</div>'+
+      '<h3>'+c.title+'</h3>'+
+      '<p>'+c.desc+'</p>'+
+      '<div class="tag-list">'+tagsHtml+'</div>';
+    grid.appendChild(card);
+  });
+}
+
+/* ============================================================
+   RENDER: Vision pillars
+   ============================================================ */
+function renderPillars(lang){
+  var d = t(lang).vision;
+  var grid = document.getElementById("pillarsGrid");
+  grid.innerHTML = "";
+  d.pillars.forEach(function(p, i){
+    var card = el("article","pillar-card reveal is-visible");
+    card.innerHTML =
+      '<div class="icon-wrap icon-wrap-lg">'+PILLAR_ICONS[i]+'</div>'+
+      '<span class="pillar-index">0'+(i+1)+'</span>'+
+      '<h3>'+p.title+'</h3>'+
+      '<p>'+p.desc+'</p>';
+    grid.appendChild(card);
+  });
+}
+
+/* ============================================================
+   QUIZ LOGIC
+   ============================================================ */
+var quiz = { index:0, score:0, answered:false, order:[] };
+
+function shuffledOptions(q){
+  var arr = q.options.map(function(text, i){ return {text:text, isCorrect: i === q.correct}; });
+  for(var i = arr.length - 1; i > 0; i--){
+    var j = Math.floor(Math.random() * (i + 1));
+    var tmp = arr[i]; arr[i] = arr[j]; arr[j] = tmp;
+  }
+  return arr;
+}
+
+function startQuiz(){
+  var d = t(currentLang).quiz;
+  quiz.index = 0;
+  quiz.score = 0;
+  quiz.order = d.questions.map(shuffledOptions);
+  document.getElementById("quizScoreScreen").classList.remove("show");
+  document.getElementById("quizActive").style.display = "";
+  renderQuizQuestion();
+}
+
+function renderQuizQuestion(){
+  var d = t(currentLang).quiz;
+  var total = d.questions.length;
+  var q = d.questions[quiz.index];
+  var opts = quiz.order[quiz.index];
+  quiz.answered = false;
+
+  document.getElementById("quizProgressLabel").textContent = fmt(d.questionLabel, {n: quiz.index + 1, t: total});
+  document.getElementById("quizScoreLive").textContent = quiz.score + " / " + total;
+  document.getElementById("progressFill").style.width = Math.round((quiz.index / total) * 100) + "%";
+  document.getElementById("quizQuestion").textContent = q.q;
+  document.getElementById("quizFeedback").textContent = "";
+  document.getElementById("quizFeedback").className = "quiz-feedback";
+
+  var optWrap = document.getElementById("quizOptions");
+  optWrap.innerHTML = "";
+  var letters = ["A","B","C","D","E","F"];
+  opts.forEach(function(opt, i){
+    var btn = el("button","quiz-option");
+    btn.type = "button";
+    btn.innerHTML = '<span class="opt-letter">'+letters[i]+'</span><span>'+opt.text+'</span>';
+    btn.addEventListener("click", function(){ handleAnswer(btn, opt, optWrap); });
+    optWrap.appendChild(btn);
+  });
+
+  var nextBtn = document.getElementById("quizNextBtn");
+  nextBtn.style.display = "none";
+  nextBtn.textContent = (quiz.index === total - 1) ? d.finish : d.next;
+}
+
+function handleAnswer(btn, opt, optWrap){
+  if(quiz.answered) return;
+  quiz.answered = true;
+  var d = t(currentLang).quiz;
+  var feedback = document.getElementById("quizFeedback");
+
+  optWrap.querySelectorAll(".quiz-option").forEach(function(b){ b.disabled = true; });
+
+  if(opt.isCorrect){
+    btn.classList.add("correct");
+    quiz.score++;
+    feedback.textContent = d.correct;
+    feedback.className = "quiz-feedback state-correct";
+  } else {
+    btn.classList.add("incorrect");
+    feedback.textContent = d.incorrect;
+    feedback.className = "quiz-feedback state-incorrect";
+    var correctBtn = Array.prototype.find.call(optWrap.children, function(b){ return false; });
+    var opts = quiz.order[quiz.index];
+    optWrap.querySelectorAll(".quiz-option").forEach(function(b, i){
+      if(opts[i].isCorrect) b.classList.add("correct");
+    });
+  }
+
+  document.getElementById("quizScoreLive").textContent = quiz.score + " / " + d.questions.length;
+  var nextBtn = document.getElementById("quizNextBtn");
+  nextBtn.style.display = "inline-flex";
+}
+
+document.getElementById("quizNextBtn").addEventListener("click", function(){
+  var d = t(currentLang).quiz;
+  if(quiz.index === d.questions.length - 1){
+    showScoreScreen();
+  } else {
+    quiz.index++;
+    renderQuizQuestion();
+  }
+});
+
+function showScoreScreen(){
+  var d = t(currentLang).quiz;
+  var total = d.questions.length;
+  document.getElementById("progressFill").style.width = "100%";
+  var pct = Math.round((quiz.score / total) * 100);
+  var grade = d.grades[d.grades.length - 1];
+  for(var i=0;i<d.grades.length;i++){
+    if(pct >= d.grades[i][0]){ grade = d.grades[i]; break; }
+  }
+  document.getElementById("scoreEmoji").textContent = grade[2];
+  document.getElementById("scoreNum").textContent = quiz.score + " / " + total;
+  document.getElementById("scoreGrade").textContent = grade[1];
+  document.getElementById("scoreSub").textContent = fmt(d.scoreSub, {score: quiz.score, total: total});
+  document.getElementById("quizRestartBtn").textContent = d.restart;
+  document.getElementById("quizActive").style.display = "none";
+  document.getElementById("quizScoreScreen").classList.add("show");
+}
+
+document.getElementById("quizRestartBtn").addEventListener("click", startQuiz);
+
+/* ============================================================
+   GREETING CARD
+   ============================================================ */
+var nameInput = document.getElementById("nameInput");
+var formHint = document.getElementById("formHint");
+var downloadBtn = document.getElementById("downloadBtn");
+var shareBtn = document.getElementById("shareBtn");
+var canvas = document.getElementById("greetingCanvas");
+var ctx = canvas.getContext("2d");
+var lastCanvasBlob = null;
+
+function updatePreviewTexts(){
+  var d = t(currentLang).card;
+  var name = nameInput.value.trim();
+  document.getElementById("pvKicker").textContent = d.kicker;
+  document.getElementById("pvName").textContent = name || d.defaultName;
+  document.getElementById("pvLine").textContent = d.line;
+  document.getElementById("pvTagline").textContent = d.tagline;
+}
+
+nameInput.addEventListener("input", function(){
+  updatePreviewTexts();
+  downloadBtn.disabled = true;
+  shareBtn.disabled = true;
+  lastCanvasBlob = null;
+  formHint.textContent = "";
+});
+
+function roundRect(c, x, y, w, h, r){
+  c.beginPath();
+  c.moveTo(x+r, y);
+  c.arcTo(x+w, y, x+w, y+h, r);
+  c.arcTo(x+w, y+h, x, y+h, r);
+  c.arcTo(x, y+h, x, y, r);
+  c.arcTo(x, y, x+w, y, r);
+  c.closePath();
+}
+
+function drawCard(name){
+  var d = t(currentLang).card;
+  var W = canvas.width, H = canvas.height;
+  var dir = t(currentLang).dir;
+
+  ctx.clearRect(0,0,W,H);
+
+  var bg = ctx.createLinearGradient(0,0,W,H);
+  bg.addColorStop(0,"#0c1424");
+  bg.addColorStop(.55,"#152238");
+  bg.addColorStop(1,"#0c1424");
+  ctx.fillStyle = bg;
+  ctx.fillRect(0,0,W,H);
+
+  var g1 = ctx.createRadialGradient(W*0.16,H*0.18,10,W*0.16,H*0.18,420);
+  g1.addColorStop(0,"rgba(16,185,129,.38)");
+  g1.addColorStop(1,"rgba(16,185,129,0)");
+  ctx.fillStyle = g1; ctx.fillRect(0,0,W,H);
+
+  var g2 = ctx.createRadialGradient(W*0.88,H*0.86,10,W*0.88,H*0.86,420);
+  g2.addColorStop(0,"rgba(245,158,11,.32)");
+  g2.addColorStop(1,"rgba(245,158,11,0)");
+  ctx.fillStyle = g2; ctx.fillRect(0,0,W,H);
+
+  ctx.strokeStyle = "rgba(255,255,255,.16)";
+  ctx.lineWidth = 2;
+  roundRect(ctx, 26, 26, W-52, H-52, 18);
+  ctx.stroke();
+
+  ctx.save();
+  ctx.strokeStyle = "rgba(255,255,255,.05)";
+  ctx.lineWidth = 1;
+  for(var gx = 60; gx < W; gx += 60){ ctx.beginPath(); ctx.moveTo(gx,40); ctx.lineTo(gx,H-40); ctx.stroke(); }
+  ctx.restore();
+
+  ctx.direction = dir === "rtl" ? "rtl" : "ltr";
+  ctx.textAlign = "center";
+
+  ctx.fillStyle = "#f59e0b";
+  ctx.font = "700 30px " + fontStack(currentLang);
+  ctx.fillText(d.kicker, W/2, H*0.30);
+
+  ctx.fillStyle = "#ffffff";
+  ctx.font = "900 " + nameFontSize(name) + "px " + fontStack(currentLang);
+  ctx.fillText(name || d.defaultName, W/2, H*0.47);
+
+  ctx.fillStyle = "#c3d0e6";
+  ctx.font = "500 24px " + fontStack(currentLang);
+  ctx.fillText(d.line, W/2, H*0.58);
+
+  ctx.fillStyle = "#10b981";
+  ctx.font = "700 20px " + fontStack(currentLang);
+  ctx.fillText(d.tagline, W/2, H*0.68);
+
+  ctx.textAlign = "start";
+  ctx.direction = "ltr";
+  ctx.fillStyle = "rgba(255,255,255,.55)";
+  ctx.font = "700 16px Inter, sans-serif";
+  var badgeText = "Y10";
+  var bw = ctx.measureText(badgeText).width + 26;
+  var bx = dir === "rtl" ? 44 : (W - 44 - bw);
+  var by = H - 70;
+  ctx.strokeStyle = "rgba(255,255,255,.25)";
+  ctx.lineWidth = 1.5;
+  roundRect(ctx, bx, by, bw, 34, 17);
+  ctx.stroke();
+  ctx.textAlign = "center";
+  ctx.fillText(badgeText, bx + bw/2 - ctx.measureText(badgeText).width/2, by + 22);
+}
+
+function fontStack(lang){
+  if(lang === "en") return "Inter, sans-serif";
+  if(lang === "zh") return "'Noto Sans SC', sans-serif";
+  return "Tajawal, sans-serif";
+}
+function nameFontSize(name){
+  var len = (name || "").length;
+  if(len > 16) return 46;
+  if(len > 10) return 58;
+  return 72;
+}
+
+document.getElementById("greetingForm").addEventListener("submit", function(e){
+  e.preventDefault();
+  var d = t(currentLang).card;
+  var name = nameInput.value.trim();
+  if(!name){
+    formHint.textContent = d.hintEmpty;
+    downloadBtn.disabled = true;
+    shareBtn.disabled = true;
+    return;
+  }
+  var ready = function(){
+    drawCard(name);
+    formHint.textContent = d.hintReady;
+    downloadBtn.disabled = false;
+    shareBtn.disabled = false;
+    canvas.toBlob(function(blob){ lastCanvasBlob = blob; }, "image/png");
+  };
+  if(document.fonts && document.fonts.ready){
+    document.fonts.ready.then(ready);
+  } else {
+    ready();
+  }
+});
+
+downloadBtn.addEventListener("click", function(){
+  var d = t(currentLang).card;
+  var link = document.createElement("a");
+  link.download = d.filename + ".png";
+  link.href = canvas.toDataURL("image/png");
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+});
+
+shareBtn.addEventListener("click", function(){
+  var d = t(currentLang).card;
+  canvas.toBlob(function(blob){
+    var file = new File([blob], d.filename + ".png", {type:"image/png"});
+    if(navigator.canShare && navigator.canShare({files:[file]})){
+      navigator.share({
+        files:[file],
+        title:d.title,
+        text:d.tagline
+      }).catch(function(){});
+    } else {
+      formHint.textContent = d.shareFallback;
+      var link = document.createElement("a");
+      link.download = d.filename + ".png";
+      link.href = canvas.toDataURL("image/png");
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+    }
+  }, "image/png");
+});
+
+/* ============================================================
+   LANGUAGE SWITCH MASTER
+   ============================================================ */
+function setLanguage(lang){
+  if(!I18N[lang]) return;
+  currentLang = lang;
+  var d = t(lang);
+
+  document.documentElement.setAttribute("lang", lang);
+  document.documentElement.setAttribute("dir", d.dir);
+  document.body.setAttribute("data-lang", lang);
+  document.getElementById("pageTitle").textContent = d.pageTitle;
+  document.title = d.pageTitle;
+  document.getElementById("pageDesc").setAttribute("content", d.pageDesc);
+
+  langBtnLabel.textContent = d.nativeName;
+  langMenu.querySelectorAll(".lang-option").forEach(function(opt){
+    opt.setAttribute("aria-current", opt.getAttribute("data-lang-opt") === lang ? "true" : "false");
+  });
+
+  applySimpleI18n(lang);
+  renderHero(lang);
+  renderAchievements(lang);
+  renderPillars(lang);
+
+  nameInput.setAttribute("placeholder", d.card.placeholder);
+  updatePreviewTexts();
+  downloadBtn.disabled = true;
+  shareBtn.disabled = true;
+  formHint.textContent = "";
+  lastCanvasBlob = null;
+
+  document.getElementById("footerCredit").textContent = d.footer.credit;
+  document.getElementById("footerCopy").textContent = d.footer.copy;
+  document.getElementById("footerNote").textContent = d.footer.note;
+
+  startQuiz();
+
+  document.querySelectorAll(".reveal").forEach(function(node){ node.classList.add("is-visible"); });
+  observeReveals();
+}
+
+/* ============================================================
+   SCROLL SPY + REVEAL ANIMATIONS
+   ============================================================ */
+var navLinks = Array.prototype.slice.call(document.querySelectorAll(".nav-link"));
+function setupScrollSpy(){
+  var sections = ["hero","achievements","vision","quiz","greeting"].map(function(id){
+    return document.getElementById(id);
+  }).filter(Boolean);
+  if(!("IntersectionObserver" in window)) return;
+  var obs = new IntersectionObserver(function(entries){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        var id = entry.target.id;
+        navLinks.forEach(function(link){
+          link.classList.toggle("active", link.getAttribute("href") === "#" + id);
+        });
+      }
+    });
+  }, {rootMargin:"-40% 0px -50% 0px", threshold:0});
+  sections.forEach(function(s){ obs.observe(s); });
+}
+
+var revealObserver = null;
+function observeReveals(){
+  if(!("IntersectionObserver" in window)){
+    document.querySelectorAll(".reveal").forEach(function(n){ n.classList.add("is-visible"); });
+    return;
+  }
+  if(revealObserver) revealObserver.disconnect();
+  revealObserver = new IntersectionObserver(function(entries, obs){
+    entries.forEach(function(entry){
+      if(entry.isIntersecting){
+        entry.target.classList.add("is-visible");
+        obs.unobserve(entry.target);
+      }
+    });
+  }, {threshold:0.12});
+  document.querySelectorAll(".reveal:not(.is-visible)").forEach(function(n){ revealObserver.observe(n); });
+}
+
+/* ============================================================
+   INIT
+   ============================================================ */
+buildLangMenu();
+setLanguage("ar");
+setupScrollSpy();
+})();
+</script>
+</body>
+</html>
