@@ -1,0 +1,2034 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl" id="htmlRoot">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>رؤية وطن 2030 | نحلم ونحقق</title>
+  <meta name="description" content="مشروع مدرسي متكامل يحتفي باليوم الوطني السعودي، ويستعرض أبرز منجزات المملكة العربية السعودية وركائز رؤية 2030.">
+  <meta name="theme-color" content="#0f172a">
+
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f172a'/%3E%3Ctext x='32' y='40' font-size='24' font-family='Tahoma' fill='%2310b981' text-anchor='middle' font-weight='bold'%3EY10%3C/text%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+SC:wght@400;500;700&family=Noto+Nastaliq+Urdu:wght@400;700&family=Readex+Pro:wght@400;500;600;700&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg-slate: #0f172a;
+      --card-bg: #1e293b;
+      --card-hover: #334155;
+      --emerald: #10b981;
+      --emerald-dark: #059669;
+      --gold: #f59e0b;
+      --gold-light: #fbbf24;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --border-color: rgba(255, 255, 255, 0.08);
+      --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: var(--bg-slate);
+      color: var(--text-main);
+      font-family: 'Tajawal', sans-serif;
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    [dir="ltr"] body {
+      font-family: 'Inter', sans-serif;
+    }
+
+    [dir="ltr"] [lang="zh"] body {
+      font-family: 'Noto Sans SC', sans-serif;
+    }
+
+    [dir="rtl"] [lang="ur"] body {
+      font-family: 'Noto Nastaliq Urdu', 'Tajawal', sans-serif;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    /* Header & Navbar */
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      background: rgba(15, 23, 42, 0.85);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-color);
+      transition: var(--transition);
+    }
+
+    .header-inner {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 80px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      color: var(--text-main);
+    }
+
+    .brand-mark {
+      background: linear-gradient(135deg, var(--emerald), var(--emerald-dark));
+      color: #fff;
+      font-weight: 800;
+      font-size: 1.1rem;
+      padding: 0.4rem 0.8rem;
+      border-radius: 8px;
+    }
+
+    .brand-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+    }
+
+    .accent {
+      color: var(--emerald);
+    }
+
+    .gold-accent {
+      color: var(--gold);
+    }
+
+    .main-nav {
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+    }
+
+    .nav-link {
+      color: var(--text-muted);
+      text-decoration: none;
+      font-weight: 500;
+      font-size: 0.95rem;
+      transition: var(--transition);
+    }
+
+    .nav-link:hover, .nav-link.active {
+      color: var(--emerald);
+    }
+
+    .header-controls {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .lang-select {
+      background: var(--card-bg);
+      color: var(--text-main);
+      border: 1px solid var(--border-color);
+      padding: 0.4rem 0.8rem;
+      border-radius: 8px;
+      font-family: inherit;
+      cursor: pointer;
+      outline: none;
+      transition: var(--transition);
+    }
+
+    .lang-select:hover {
+      border-color: var(--emerald);
+    }
+
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: none;
+      cursor: pointer;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .nav-toggle span {
+      display: block;
+      width: 25px;
+      height: 2px;
+      background: var(--text-main);
+      transition: var(--transition);
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: 6rem 0 4rem;
+      text-align: center;
+      position: relative;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: 10%;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 600px;
+      height: 300px;
+      background: radial-gradient(circle, rgba(16, 185, 129, 0.15) 0%, transparent 70%);
+      z-index: -1;
+      filter: blur(50px);
+    }
+
+    .hero-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 24px;
+      padding: 3rem 2rem;
+      backdrop-filter: blur(10px);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    .hero-badges {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 1.5rem;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.5rem 1rem;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 600;
+    }
+
+    .badge-gold {
+      background: rgba(245, 158, 11, 0.15);
+      color: var(--gold);
+      border: 1px solid rgba(245, 158, 11, 0.3);
+    }
+
+    .badge-outline {
+      background: transparent;
+      color: var(--text-muted);
+      border: 1px solid var(--border-color);
+    }
+
+    .hero h1 {
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 800;
+      margin-bottom: 1.5rem;
+      letter-spacing: -0.02em;
+    }
+
+    .hero-sub {
+      color: var(--text-muted);
+      font-size: 1.15rem;
+      max-width: 750px;
+      margin: 0 auto 2.5rem;
+    }
+
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+      gap: 1.5rem;
+      max-width: 600px;
+      margin: 0 auto 3rem;
+    }
+
+    .stat {
+      background: rgba(15, 23, 42, 0.5);
+      border: 1px solid var(--border-color);
+      padding: 1.2rem;
+      border-radius: 14px;
+    }
+
+    .stat-num {
+      display: block;
+      font-size: 1.8rem;
+      font-weight: 700;
+      color: var(--emerald);
+    }
+
+    .stat-label {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .hero-actions {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.8rem 1.8rem;
+      border-radius: 12px;
+      font-weight: 600;
+      font-size: 1rem;
+      cursor: pointer;
+      text-decoration: none;
+      transition: var(--transition);
+      border: none;
+      font-family: inherit;
+    }
+
+    .btn-primary {
+      background: var(--emerald);
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      background: var(--emerald-dark);
+      transform: translateY(-2px);
+      box-shadow: 0 10px 20px rgba(16, 185, 129, 0.3);
+    }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--text-main);
+      border: 1px solid var(--border-color);
+    }
+
+    .btn-ghost:hover {
+      background: var(--card-hover);
+      border-color: var(--text-muted);
+    }
+
+    /* Sections Shared */
+    .section {
+      padding: 5rem 0;
+    }
+
+    .section-alt {
+      background: rgba(30, 41, 59, 0.4);
+      border-top: 1px solid var(--border-color);
+      border-bottom: 1px solid var(--border-color);
+    }
+
+    .section-head {
+      text-align: center;
+      max-width: 700px;
+      margin: 0 auto 4rem;
+    }
+
+    .section-tag {
+      display: inline-block;
+      color: var(--emerald);
+      font-weight: 600;
+      text-transform: uppercase;
+      font-size: 0.85rem;
+      letter-spacing: 0.1em;
+      margin-bottom: 0.75rem;
+    }
+
+    .section-head h2 {
+      font-size: 2.2rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+    }
+
+    .section-head p {
+      color: var(--text-muted);
+    }
+
+    /* Leadership Quotes Section */
+    .quotes-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+
+    .quote-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 20px;
+      padding: 2.5rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      transition: var(--transition);
+    }
+
+    .quote-card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(16, 185, 129, 0.3);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .quote-icon {
+      font-size: 3rem;
+      color: var(--emerald);
+      line-height: 1;
+      margin-bottom: 1rem;
+    }
+
+    .quote-text {
+      font-size: 1.1rem;
+      font-style: italic;
+      color: var(--text-main);
+      margin-bottom: 1.5rem;
+    }
+
+    .quote-author {
+      font-weight: 700;
+      color: var(--gold);
+      font-size: 1rem;
+    }
+
+    .quote-title {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    /* Live Countdown Timers */
+    .countdown-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 2rem;
+    }
+
+    .countdown-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 20px;
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .countdown-card h3 {
+      font-size: 1.3rem;
+      margin-bottom: 1.5rem;
+      color: var(--text-main);
+    }
+
+    .timer-boxes {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0.75rem;
+    }
+
+    .timer-box {
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px solid var(--border-color);
+      padding: 1rem 0.5rem;
+      border-radius: 12px;
+    }
+
+    .timer-num {
+      display: block;
+      font-size: 1.6rem;
+      font-weight: 700;
+      color: var(--emerald);
+    }
+
+    .timer-label {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      margin-top: 0.25rem;
+    }
+
+    /* Achievements & Mega Projects */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2rem;
+    }
+
+    .card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 20px;
+      padding: 2rem;
+      transition: var(--transition);
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card:hover {
+      transform: translateY(-5px);
+      border-color: rgba(16, 185, 129, 0.3);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+    }
+
+    .icon-wrap {
+      width: 55px;
+      height: 55px;
+      background: rgba(16, 185, 129, 0.1);
+      border: 1px solid rgba(16, 185, 129, 0.2);
+      border-radius: 14px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--emerald);
+      margin-bottom: 1.5rem;
+    }
+
+    .icon-wrap svg {
+      width: 26px;
+      height: 26px;
+    }
+
+    .card h3 {
+      font-size: 1.25rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+      margin-bottom: 1.5rem;
+      flex-grow: 1;
+    }
+
+    .tag-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .tag {
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px solid var(--border-color);
+      color: var(--text-muted);
+      font-size: 0.75rem;
+      padding: 0.3rem 0.7rem;
+      border-radius: 6px;
+    }
+
+    /* Vision 2030 Pillars */
+    .pillars-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 2rem;
+    }
+
+    .pillar-card {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 20px;
+      padding: 2.5rem 2rem;
+      position: relative;
+      overflow: hidden;
+      transition: var(--transition);
+    }
+
+    .pillar-card:hover {
+      transform: translateY(-5px);
+      border-color: var(--emerald);
+    }
+
+    .pillar-index {
+      position: absolute;
+      top: 1.5rem;
+      right: 1.5rem;
+      font-size: 3rem;
+      font-weight: 800;
+      color: rgba(255, 255, 255, 0.03);
+      line-height: 1;
+    }
+
+    [dir="ltr"] .pillar-index {
+      right: auto;
+      left: 1.5rem;
+    }
+
+    .icon-wrap-lg {
+      width: 65px;
+      height: 65px;
+      margin-bottom: 1.5rem;
+    }
+
+    .pillar-card h3 {
+      font-size: 1.4rem;
+      margin-bottom: 1rem;
+    }
+
+    .pillar-card p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    /* Interactive Quiz */
+    .quiz-container {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 24px;
+      padding: 2.5rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .quiz-progress {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.5rem;
+      font-size: 0.9rem;
+      color: var(--text-muted);
+    }
+
+    .progress-bar-track {
+      width: 100%;
+      height: 6px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 3px;
+      margin-bottom: 2rem;
+      overflow: hidden;
+    }
+
+    .progress-bar-fill {
+      height: 100%;
+      background: var(--emerald);
+      width: 0%;
+      transition: width 0.3s ease;
+    }
+
+    .quiz-question {
+      font-size: 1.3rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+    }
+
+    .quiz-options {
+      display: grid;
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .quiz-option {
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px solid var(--border-color);
+      padding: 1rem 1.25rem;
+      border-radius: 12px;
+      cursor: pointer;
+      font-family: inherit;
+      color: var(--text-main);
+      text-align: inherit;
+      font-size: 1rem;
+      transition: var(--transition);
+    }
+
+    .quiz-option:hover:not(:disabled) {
+      background: var(--card-hover);
+      border-color: var(--emerald);
+    }
+
+    .quiz-option.correct {
+      background: rgba(16, 185, 129, 0.2);
+      border-color: var(--emerald);
+      color: var(--emerald);
+    }
+
+    .quiz-option.incorrect {
+      background: rgba(239, 68, 68, 0.2);
+      border-color: #ef4444;
+      color: #ef4444;
+    }
+
+    .quiz-result-box {
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .quiz-result-box h3 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    /* Greeting Card Generator */
+    .greeting-wrap {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 24px;
+      padding: 2.5rem;
+      align-items: center;
+    }
+
+    @media (max-width: 900px) {
+      .greeting-wrap {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .greeting-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+
+    .greeting-form label {
+      font-weight: 600;
+      font-size: 1rem;
+    }
+
+    .greeting-form input {
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px solid var(--border-color);
+      padding: 0.9rem 1.2rem;
+      border-radius: 12px;
+      color: var(--text-main);
+      font-family: inherit;
+      font-size: 1rem;
+      outline: none;
+      transition: var(--transition);
+    }
+
+    .greeting-form input:focus {
+      border-color: var(--emerald);
+    }
+
+    .form-hint {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .greeting-card {
+      background: linear-gradient(135deg, #064e3b 0%, #022c22 100%);
+      border: 2px solid var(--gold);
+      border-radius: 20px;
+      padding: 2.5rem 2rem;
+      text-align: center;
+      position: relative;
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    .greeting-preview {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .greeting-kicker {
+      color: var(--gold);
+      font-weight: 600;
+      font-size: 0.95rem;
+      letter-spacing: 0.05em;
+    }
+
+    .greeting-name {
+      font-size: 2rem;
+      font-weight: 800;
+      color: #fff;
+      text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    }
+
+    .greeting-line {
+      color: rgba(255, 255, 255, 0.85);
+      font-size: 1.05rem;
+    }
+
+    .greeting-tagline {
+      background: rgba(245, 158, 11, 0.2);
+      color: var(--gold-light);
+      padding: 0.4rem 1rem;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      border: 1px solid rgba(245, 158, 11, 0.4);
+    }
+
+    .greeting-badge {
+      position: absolute;
+      top: 1rem;
+      left: 1rem;
+      background: var(--gold);
+      color: #000;
+      font-weight: 800;
+      font-size: 0.75rem;
+      padding: 0.2rem 0.6rem;
+      border-radius: 6px;
+    }
+
+    [dir="ltr"] .greeting-badge {
+      left: auto;
+      right: 1rem;
+    }
+
+    .greeting-actions {
+      display: flex;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .greeting-actions .btn {
+      flex: 1;
+      padding: 0.6rem 1rem;
+      font-size: 0.9rem;
+    }
+
+    /* Feedback & Evaluation Form Section */
+    .feedback-container {
+      background: var(--card-bg);
+      border: 1px solid var(--border-color);
+      border-radius: 24px;
+      padding: 2.5rem;
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .rating-stars {
+      display: flex;
+      gap: 0.5rem;
+      margin-bottom: 1.5rem;
+      justify-content: center;
+      direction: ltr;
+    }
+
+    .star-btn {
+      background: none;
+      border: none;
+      font-size: 2rem;
+      color: var(--text-muted);
+      cursor: pointer;
+      transition: var(--transition);
+    }
+
+    .star-btn.active, .star-btn:hover {
+      color: var(--gold);
+      transform: scale(1.1);
+    }
+
+    .form-group {
+      margin-bottom: 1.25rem;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+    }
+
+    .form-group input, .form-group textarea {
+      width: 100%;
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px solid var(--border-color);
+      padding: 0.8rem 1rem;
+      border-radius: 12px;
+      color: var(--text-main);
+      font-family: inherit;
+      font-size: 1rem;
+      outline: none;
+      transition: var(--transition);
+    }
+
+    .form-group input:focus, .form-group textarea:focus {
+      border-color: var(--emerald);
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      height: 120px;
+    }
+
+    .feedback-alert {
+      padding: 1rem;
+      border-radius: 12px;
+      margin-top: 1rem;
+      text-align: center;
+      font-weight: 600;
+      display: none;
+    }
+
+    .feedback-alert.success {
+      background: rgba(16, 185, 129, 0.2);
+      border: 1px solid var(--emerald);
+      color: var(--emerald);
+      display: block;
+    }
+
+    .feedback-alert.error {
+      background: rgba(239, 68, 68, 0.2);
+      border: 1px solid #ef4444;
+      color: #ef4444;
+      display: block;
+    }
+
+    /* Footer */
+    .site-footer {
+      background: rgba(15, 23, 42, 0.9);
+      border-top: 1px solid var(--border-color);
+      padding: 3rem 0;
+      text-align: center;
+    }
+
+    .footer-inner {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.5rem;
+    }
+
+    .footer-brand {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+    }
+
+    .y-badge {
+      background: var(--emerald);
+      color: #fff;
+      font-weight: 800;
+      padding: 0.4rem 0.8rem;
+      border-radius: 8px;
+    }
+
+    .footer-text p {
+      font-size: 0.95rem;
+      color: var(--text-muted);
+    }
+
+    .footer-credit {
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .main-nav {
+        display: none;
+        position: absolute;
+        top: 80px;
+        left: 0;
+        right: 0;
+        background: var(--card-bg);
+        flex-direction: column;
+        padding: 1.5rem;
+        border-bottom: 1px solid var(--border-color);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+      }
+
+      .main-nav.open {
+        display: flex;
+      }
+
+      .nav-toggle {
+        display: flex;
+      }
+
+      .timer-boxes {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header" id="top">
+    <div class="container header-inner">
+      <a class="brand" href="#top">
+        <span class="brand-mark">٢٠٣٠</span>
+        <span class="brand-title" data-i18n="brand_title">رؤية وطن <span class="accent">2030</span></span>
+      </a>
+
+      <nav class="main-nav" id="mainNav">
+        <a href="#hero" class="nav-link active" data-i18n="nav_home">الرئيسية</a>
+        <a href="#quotes" class="nav-link" data-i18n="nav_quotes">أقوال القادة</a>
+        <a href="#countdown" class="nav-link" data-i18n="nav_events">العد التنازلي</a>
+        <a href="#achievements" class="nav-link" data-i18n="nav_achievements">الإنجازات</a>
+        <a href="#vision" class="nav-link" data-i18n="nav_vision">رؤية 2030</a>
+        <a href="#quiz" class="nav-link" data-i18n="nav_quiz">اختبر معلوماتك</a>
+        <a href="#greeting" class="nav-link" data-i18n="nav_card">بطاقتك</a>
+        <a href="#feedback" class="nav-link" data-i18n="nav_feedback">التقييم</a>
+      </nav>
+
+      <div class="header-controls">
+        <select class="lang-select" id="langSelect" aria-label="اختر اللغة">
+          <option value="ar">العربية</option>
+          <option value="en">English</option>
+          <option value="ur">اردو</option>
+          <option value="zh">中文</option>
+        </select>
+
+        <button class="nav-toggle" id="navToggle" aria-label="فتح القائمة">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+      <div class="container">
+        <div class="hero-card">
+          <div class="hero-badges">
+            <span class="badge badge-gold">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l2.4 6.6L21 11l-6.6 2.4L12 20l-2.4-6.6L3 11l6.6-2.4z"></path></svg>
+              <span data-i18n="hero_badge1">مشروع مدرسي متكامل</span>
+            </span>
+            <span class="badge badge-outline" data-i18n="hero_badge2">اليوم الوطني السعودي · ٢٣ سبتمبر</span>
+          </div>
+
+          <h1><span data-i18n="hero_title1">نحلم</span> <span class="accent" data-i18n="hero_title_and">و</span><span data-i18n="hero_title2">نحقق</span></h1>
+          <p class="hero-sub" data-i18n="hero_sub">
+            احتفاءً باليوم الوطني السعودي، نستعرض في هذه الصفحة أبرز منجزات المملكة العربية السعودية، ومحطات رؤية 2030 التي تحوّل الأحلام إلى واقع يلمسه كل مواطن ومواطنة.
+          </p>
+
+          <div class="hero-stats">
+            <div class="stat">
+              <span class="stat-num">2030</span>
+              <span class="stat-label" data-i18n="stat_vision">رؤية المملكة</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">٧</span>
+              <span class="stat-label" data-i18n="stat_projects">مشاريع كبرى</span>
+            </div>
+            <div class="stat">
+              <span class="stat-num">٣</span>
+              <span class="stat-label" data-i18n="stat_pillars">ركائز الرؤية</span>
+            </div>
+          </div>
+
+          <div class="hero-actions">
+            <a href="#achievements" class="btn btn-primary" data-i18n="btn_explore">استكشف الإنجازات</a>
+            <a href="#greeting" class="btn btn-ghost" data-i18n="btn_card">أنشئ بطاقتك التهنئية</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Leadership Quotes Section -->
+    <section class="section section-alt" id="quotes">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-tag" data-i18n="quotes_tag">قيادة حكيمة</span>
+          <h2 data-i18n="quotes_title">أقوال خالدة</h2>
+          <p data-i18n="quotes_sub">كلمات ملهمة من قادة المملكة الذين رسموا ملامح المجد والعز وبنوا أساس هذا الوطن العظيم.</p>
+        </div>
+
+        <div class="quotes-grid">
+          <div class="quote-card">
+            <div class="quote-icon">“</div>
+            <p class="quote-text" data-i18n="quote1_text">إنني أعتمد على الله ثم على عزم إخواني وأبنائي المواطنين في حفظ الأمن والرخاء، وبناء مستقبل مشرق لهذا الوطن الأبي.</p>
+            <div>
+              <h4 class="quote-author" data-i18n="quote1_author">الملك عبدالعزيز آل سعود</h4>
+              <span class="quote-title" data-i18n="quote1_title">مؤسس المملكة العربية السعودية</span>
+            </div>
+          </div>
+
+          <div class="quote-card">
+            <div class="quote-icon">“</div>
+            <p class="quote-text" data-i18n="quote2_text">جلّ اهتمامي هو خدمة المواطن السعودي وتوفير سبل الحياة الكريمة له، مستندين إلى قيمنا الراسخة ومكتسباتنا الوطنية.</p>
+            <div>
+              <h4 class="quote-author" data-i18n="quote2_author">الملك سلمان بن عبدالعزيز آل سعود</h4>
+              <span class="quote-title" data-i18n="quote2_title">خادم الحرمين الشريفين</span>
+            </div>
+          </div>
+
+          <div class="quote-card">
+            <div class="quote-icon">“</div>
+            <p class="quote-text" data-i18n="quote3_text">طموحنا عنان السماء حتى نجد مكاناً للجميع.. ولا مكان لمتخاذل بيننا في بناء هذا المستقبل العظيم.</p>
+            <div>
+              <h4 class="quote-author" data-i18n="quote3_author">الأمير محمد بن سلمان آل سعود</h4>
+              <span class="quote-title" data-i18n="quote3_title">ولي العهد رئيس مجلس الوزراء</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Live Countdown Timers Section -->
+    <section class="section" id="countdown">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-tag" data-i18n="countdown_tag">محطات المستقبل</span>
+          <h2 data-i18n="countdown_title">عدادات تنازلية للفعاليات الكبرى</h2>
+          <p data-i18n="countdown_sub">تابع الوقت الباقي لاستضافة أكبر الفعاليات والمناسبات الوطنية والعالمية القادمة في المملكة.</p>
+        </div>
+
+        <div class="countdown-grid">
+          <!-- National Day -->
+          <div class="countdown-card">
+            <h3 data-i18n="event1_title">اليوم الوطني السعودي القادم</h3>
+            <div class="timer-boxes" id="timerNationalDay">
+              <div class="timer-box"><span class="timer-num days">00</span><span class="timer-label" data-i18n="timer_days">يوم</span></div>
+              <div class="timer-box"><span class="timer-num hours">00</span><span class="timer-label" data-i18n="timer_hours">ساعة</span></div>
+              <div class="timer-box"><span class="timer-num minutes">00</span><span class="timer-label" data-i18n="timer_mins">دقيقة</span></div>
+              <div class="timer-box"><span class="timer-num seconds">00</span><span class="timer-label" data-i18n="timer_secs">ثانية</span></div>
+            </div>
+          </div>
+
+          <!-- Riyadh Expo 2030 -->
+          <div class="countdown-card">
+            <h3 data-i18n="event2_title">معرض الرياض إكسبو 2030</h3>
+            <div class="timer-boxes" id="timerExpo">
+              <div class="timer-box"><span class="timer-num days">00</span><span class="timer-label" data-i18n="timer_days">يوم</span></div>
+              <div class="timer-box"><span class="timer-num hours">00</span><span class="timer-label" data-i18n="timer_hours">ساعة</span></div>
+              <div class="timer-box"><span class="timer-num minutes">00</span><span class="timer-label" data-i18n="timer_mins">دقيقة</span></div>
+              <div class="timer-box"><span class="timer-num seconds">00</span><span class="timer-label" data-i18n="timer_secs">ثانية</span></div>
+            </div>
+          </div>
+
+          <!-- FIFA World Cup 2034 -->
+          <div class="countdown-card">
+            <h3 data-i18n="event3_title">كأس العالم فيفا السعودية 2034</h3>
+            <div class="timer-boxes" id="timerWorldCup">
+              <div class="timer-box"><span class="timer-num days">00</span><span class="timer-label" data-i18n="timer_days">يوم</span></div>
+              <div class="timer-box"><span class="timer-num hours">00</span><span class="timer-label" data-i18n="timer_hours">ساعة</span></div>
+              <div class="timer-box"><span class="timer-num minutes">00</span><span class="timer-label" data-i18n="timer_mins">دقيقة</span></div>
+              <div class="timer-box"><span class="timer-num seconds">00</span><span class="timer-label" data-i18n="timer_secs">ثانية</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section class="section section-alt" id="achievements">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-tag" data-i18n="ach_tag">إنجازات المملكة</span>
+          <h2 data-i18n="ach_title">منجزات تصنع المستقبل</h2>
+          <p data-i18n="ach_sub">من المدن المستقبلية إلى الذكاء الاصطناعي والفضاء، إليك أبرز المحاور التي تعكس طموح المملكة.</p>
+        </div>
+
+        <div class="cards-grid">
+          <article class="card">
+            <div class="icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"></path><path d="M5 21V9l4-4 4 4v12"></path><path d="M13 21V13h6v8"></path><path d="M9 9h.01M9 13h.01M9 17h.01"></path></svg>
+            </div>
+            <h3 data-i18n="proj1_title">مشاريع المستقبل الكبرى</h3>
+            <p data-i18n="proj1_desc">مشاريع عملاقة تعيد تعريف مستقبل العمران والسياحة والاستثمار، وتضع المملكة على خارطة أكثر المدن ابتكارًا في العالم.</p>
+            <div class="tag-list">
+              <span class="tag" data-i18n="tag_neom">نيوم</span>
+              <span class="tag" data-i18n="tag_line">ذا لاين</span>
+              <span class="tag" data-i18n="tag_qiddiya">القدية</span>
+              <span class="tag" data-i18n="tag_murabba">مربع الرياض الجديد</span>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="6" width="12" height="12" rx="2"></rect><path d="M9 2v3M15 2v3M9 19v3M15 19v3M2 9h3M2 15h3M19 9h3M19 15h3"></path></svg>
+            </div>
+            <h3 data-i18n="proj2_title">التحول الرقمي والذكاء الاصطناعي</h3>
+            <p data-i18n="proj2_desc">منظومة رقمية متكاملة تسهّل حياة المواطن وتضع المملكة في طليعة الدول الرائدة في تبني تقنيات الذكاء الاصطناعي.</p>
+            <div class="tag-list">
+              <span class="tag" data-i18n="tag_absher">أبشر</span>
+              <span class="tag" data-i18n="tag_tawakkalna">توكلنا</span>
+              <span class="tag" data-i18n="tag_sdaia">سدايا</span>
+              <span class="tag" data-i18n="tag_ai">الذكاء الاصطناعي</span>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2c2.5 3 4 6.5 4 10a4 4 0 0 1-8 0c0-3.5 1.5-7 4-10z"></path><path d="M8.5 15.5 6 21l4-1.5M15.5 15.5 18 21l-4-1.5"></path></svg>
+            </div>
+            <h3 data-i18n="proj3_title">استكشاف الفضاء والبحث العلمي</h3>
+            <p data-i18n="proj3_desc">خطوات نوعية في مجال الفضاء ودعم البحث العلمي، ضمن رؤية طموحة لبناء مستقبل قائم على المعرفة والابتكار.</p>
+            <div class="tag-list">
+              <span class="tag" data-i18n="tag_space_crew">رواد الفضاء السعوديون</span>
+              <span class="tag" data-i18n="tag_satellites">الأقمار الصناعية</span>
+            </div>
+          </article>
+
+          <article class="card">
+            <div class="icon-wrap">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21C7 17 4 13.5 4 9.5A5.5 5.5 0 0 1 12 5a5.5 5.5 0 0 1 8 4.5c0 4-3 7.5-8 11.5z"></path><path d="M12 12v5"></path></svg>
+            </div>
+            <h3 data-i18n="proj4_title">السعودية الخضراء والاستدامة</h3>
+            <p data-i18n="proj4_desc">التزام بيئي واسع يشمل زراعة مليارات الأشجار، وخفض الانبعاثات الكربونية، وحماية الموارد الطبيعية للأجيال القادمة.</p>
+            <div class="tag-list">
+              <span class="tag" data-i18n="tag_green_saudi">مبادرة السعودية الخضراء</span>
+              <span class="tag" data-i18n="tag_energy">طاقة متجددة</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Vision 2030 Pillars Section -->
+    <section class="section" id="vision">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-tag" data-i18n="vision_tag">رؤية 2030</span>
+          <h2 data-i18n="vision_title">ركائز رؤية المملكة</h2>
+          <p data-i18n="vision_sub">ثلاث ركائز أساسية تشكّل خارطة الطريق نحو مستقبل أكثر ازدهارًا وطموحًا للمملكة العربية السعودية.</p>
+        </div>
+
+        <div class="pillars-grid">
+          <article class="pillar-card">
+            <div class="icon-wrap icon-wrap-lg">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M20.8 4.6a5 5 0 0 0-7.1 0L12 6.3l-1.7-1.7a5 5 0 1 0-7.1 7.1L12 20.3l8.8-8.6a5 5 0 0 0 0-7.1z"></path></svg>
+            </div>
+            <span class="pillar-index">01</span>
+            <h3 data-i18n="pillar1_title">مجتمع حيوي</h3>
+            <p data-i18n="pillar1_desc">تعزيز الهوية الوطنية وجودة الحياة، ودعم الرياضة والثقافة والترفيه لبناء مجتمع متكافل وسعيد يفتخر بانتمائه.</p>
+          </article>
+
+          <article class="pillar-card">
+            <div class="icon-wrap icon-wrap-lg">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M3 17l6-6 4 4 8-8"></path><path d="M15 5h6v6"></path></svg>
+            </div>
+            <span class="pillar-index">02</span>
+            <h3 data-i18n="pillar2_title">اقتصاد مزدهر</h3>
+            <p data-i18n="pillar2_desc">تنويع مصادر الدخل، وتمكين القطاع الخاص، وجذب الاستثمارات المحلية والعالمية لبناء اقتصاد قوي ومستدام.</p>
+          </article>
+
+          <article class="pillar-card">
+            <div class="icon-wrap icon-wrap-lg">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 21V9l8-6 8 6v12"></path><path d="M9 21v-6h6v6"></path></svg>
+            </div>
+            <span class="pillar-index">03</span>
+            <h3 data-i18n="pillar3_title">وطن طموح</h3>
+            <p data-i18n="pillar3_desc">حوكمة فاعلة وشفافة، ومسؤولية مجتمعية راسخة، ترسّخ مكانة المملكة وتدعم تطلعاتها الطموحة إقليميًا وعالميًا.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Quiz Section -->
+    <section class="section section-alt" id="quiz">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-tag" data-i18n="quiz_tag">تحدي المعلومات</span>
+          <h2 data-i18n="quiz_title">اختبر معلوماتك عن رؤية 2030 والمملكة</h2>
+          <p data-i18n="quiz_sub">أجب عن الأسئلة التالية واكتشف مدى معرفتك بمشاريع وإنجازات وطننا الغالي.</p>
+        </div>
+
+        <div class="quiz-container" id="quizContainer">
+          <div class="quiz-progress">
+            <span id="quizStepText">السؤال ١ من ٥</span>
+            <span id="quizScoreText">النتيجة: ٠</span>
+          </div>
+          <div class="progress-bar-track">
+            <div class="progress-bar-fill" id="quizProgressBar"></div>
+          </div>
+          <div id="quizContent">
+            <!-- Quiz question injected dynamically -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Greeting Card Generator -->
+    <section class="section" id="greeting">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-tag" data-i18n="card_tag">بطاقتك الخاصة</span>
+          <h2 data-i18n="card_title">اصنع بطاقة تهنئة وطنية باسمك</h2>
+          <p data-i18n="card_sub">اكتب اسمك أدناه، وسنجهّز لك بطاقة تهنئة بمناسبة اليوم الوطني السعودي يمكنك حفظها ومشاركتها فورًا.</p>
+        </div>
+
+        <div class="greeting-wrap">
+          <form class="greeting-form" id="greetingForm" onsubmit="return false;">
+            <label for="nameInput" data-i18n="card_input_label">اكتب اسمك هنا</label>
+            <input id="nameInput" name="name" type="text" placeholder="مثال: أحمد اليافعي" maxlength="24" autocomplete="off">
+            <button type="button" class="btn btn-primary" id="generateCardBtn" data-i18n="card_btn_gen">تحديث وتصميم البطاقة</button>
+            <p class="form-hint" id="formHint" data-i18n="card_hint">سيتم تحديث المعاينة الحية للبطاقة فور إدخال اسمك.</p>
+          </form>
+
+          <div class="greeting-card" id="greetingCard">
+            <div class="greeting-preview" id="greetingPreview">
+              <span class="greeting-kicker" data-i18n="card_kicker">كل عام وأنتم بخير</span>
+              <strong class="greeting-name" id="greetingName">أحمد اليافعي</strong>
+              <span class="greeting-line" data-i18n="card_line">بمناسبة اليوم الوطني السعودي</span>
+              <span class="greeting-tagline" data-i18n="card_tagline">نحلم ونحقق — رؤية وطن 2030</span>
+              <span class="greeting-badge">Y10</span>
+            </div>
+            <canvas id="greetingCanvas" width="1000" height="600" hidden></canvas>
+            <div class="greeting-actions">
+              <button type="button" class="btn btn-ghost" id="downloadBtn" data-i18n="card_btn_download">تحميل البطاقة كصورة</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Website Evaluation & Feedback Form Section -->
+    <section class="section section-alt" id="feedback">
+      <div class="container">
+        <div class="section-head">
+          <span class="section-tag" data-i18n="feedback_tag">شاركنا رأيك</span>
+          <h2 data-i18n="feedback_title">تقييم الموقع وملاحظاتك</h2>
+          <p data-i18n="feedback_sub">نسعد بتقييمك لتجربتك في الموقع، حيث تُرسل ملاحظاتك مباشرة لتطوير المشروع.</p>
+        </div>
+
+        <div class="feedback-container">
+          <form id="feedbackForm">
+            <div class="rating-stars" id="ratingStars">
+              <button type="button" class="star-btn" data-value="1">★</button>
+              <button type="button" class="star-btn" data-value="2">★</button>
+              <button type="button" class="star-btn" data-value="3">★</button>
+              <button type="button" class="star-btn" data-value="4">★</button>
+              <button type="button" class="star-btn active" data-value="5">★</button>
+            </div>
+            <input type="hidden" name="rating" id="ratingInput" value="5">
+
+            <div class="form-group">
+              <label for="fbName" data-i18n="fb_name_label">الاسم الكريم</label>
+              <input type="text" id="fbName" name="name" required placeholder="أدخل اسمك هنا">
+            </div>
+
+            <div class="form-group">
+              <label for="fbEmail" data-i18n="fb_email_label">البريد الإلكتروني</label>
+              <input type="email" id="fbEmail" name="email" required placeholder="example@domain.com">
+            </div>
+
+            <div class="form-group">
+              <label for="fbMessage" data-i18n="fb_msg_label">الرسالة أو الملاحظات</label>
+              <textarea id="fbMessage" name="message" required placeholder="اكتب ملاحظاتك أو مقترحاتك لتطوير الموقع..."></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%;" data-i18n="fb_submit_btn">إرسال التقييم للمطور</button>
+            <div class="feedback-alert" id="feedbackAlert"></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="y-badge">Y10</span>
+        <div class="footer-text">
+          <p class="footer-credit" data-i18n="footer_credit">تصميم وتطوير: أحمد اليافعي | Y10</p>
+          <p class="footer-copy" data-i18n="footer_copy">© جميع الحقوق محفوظة — رؤية وطن 2030</p>
+        </div>
+      </div>
+      <p class="footer-note" data-i18n="footer_note">صُنع بفخر احتفاءً باليوم الوطني السعودي 🇸🇦</p>
+    </div>
+  </footer>
+
+  <script>
+    /* ----------------------------------------------------
+       MULTI-LANGUAGE SYSTEM (AR, EN, UR, ZH)
+       ---------------------------------------------------- */
+    const translations = {
+      ar: {
+        brand_title: 'رؤية وطن <span class="accent">2030</span>',
+        nav_home: 'الرئيسية',
+        nav_quotes: 'أقوال القادة',
+        nav_events: 'العد التنازلي',
+        nav_achievements: 'الإنجازات',
+        nav_vision: 'رؤية 2030',
+        nav_quiz: 'اختبر معلوماتك',
+        nav_card: 'بطاقتك',
+        nav_feedback: 'التقييم',
+        hero_badge1: 'مشروع مدرسي متكامل',
+        hero_badge2: 'اليوم الوطني السعودي · ٢٣ سبتمبر',
+        hero_title1: 'نحلم',
+        hero_title_and: 'و',
+        hero_title2: 'نحقق',
+        hero_sub: 'احتفاءً باليوم الوطني السعودي، نستعرض في هذه الصفحة أبرز منجزات المملكة العربية السعودية، ومحطات رؤية 2030 التي تحوّل الأحلام إلى واقع يلمسه كل مواطن ومواطنة.',
+        stat_vision: 'رؤية المملكة',
+        stat_projects: 'مشاريع كبرى',
+        stat_pillars: 'ركائز الرؤية',
+        btn_explore: 'استكشف الإنجازات',
+        btn_card: 'أنشئ بطاقتك التهنئية',
+        quotes_tag: 'قيادة حكيمة',
+        quotes_title: 'أقوال خالدة',
+        quotes_sub: 'كلمات ملهمة من قادة المملكة الذين رسموا ملامح المجد والعز وبنوا أساس هذا الوطن العظيم.',
+        quote1_text: 'إنني أعتمد على الله ثم على عزم إخواني وأبنائي المواطنين في حفظ الأمن والرخاء، وبناء مستقبل مشرق لهذا الوطن الأبي.',
+        quote1_author: 'الملك عبدالعزيز آل سعود',
+        quote1_title: 'مؤسس المملكة العربية السعودية',
+        quote2_text: 'جلّ اهتمامي هو خدمة المواطن السعودي وتوفير سبل الحياة الكريمة له، مستندين إلى قيمنا الراسخة ومكتسباتنا الوطنية.',
+        quote2_author: 'الملك سلمان بن عبدالعزيز آل سعود',
+        quote2_title: 'خادم الحرمين الشريفين',
+        quote3_text: 'طموحنا عنان السماء حتى نجد مكاناً للجميع.. ولا مكان لمتخاذل بيننا في بناء هذا المستقبل العظيم.',
+        quote3_author: 'الأمير محمد بن سلمان آل سعود',
+        quote3_title: 'ولي العهد رئيس مجلس الوزراء',
+        countdown_tag: 'محطات المستقبل',
+        countdown_title: 'عدادات تنازلية للفعاليات الكبرى',
+        countdown_sub: 'تابع الوقت الباقي لاستضافة أكبر الفعاليات والمناسبات الوطنية والعالمية القادمة في المملكة.',
+        event1_title: 'اليوم الوطني السعودي القادم',
+        event2_title: 'معرض الرياض إكسبو 2030',
+        event3_title: 'كأس العالم فيفا السعودية 2034',
+        timer_days: 'يوم',
+        timer_hours: 'ساعة',
+        timer_mins: 'دقيقة',
+        timer_secs: 'ثانية',
+        ach_tag: 'إنجازات المملكة',
+        ach_title: 'منجزات تصنع المستقبل',
+        ach_sub: 'من المدن المستقبلية إلى الذكاء الاصطناعي والفضاء، إليك أبرز المحاور التي تعكس طموح المملكة.',
+        proj1_title: 'مشاريع المستقبل الكبرى',
+        proj1_desc: 'مشاريع عملاقة تعيد تعريف مستقبل العمران والسياحة والاستثمار، وتضع المملكة على خارطة أكثر المدن ابتكارًا في العالم.',
+        tag_neom: 'نيوم',
+        tag_line: 'ذا لاين',
+        tag_qiddiya: 'القدية',
+        tag_murabba: 'مربع الرياض الجديد',
+        proj2_title: 'التحول الرقمي والذكاء الاصطناعي',
+        proj2_desc: 'منظومة رقمية متكاملة تسهّل حياة المواطن وتضع المملكة في طليعة الدول الرائدة في تبني تقنيات الذكاء الاصطناعي.',
+        tag_absher: 'أبشر',
+        tag_tawakkalna: 'توكلنا',
+        tag_sdaia: 'سدايا',
+        tag_ai: 'الذكاء الاصطناعي',
+        proj3_title: 'استكشاف الفضاء والبحث العلمي',
+        proj3_desc: 'خطوات نوعية في مجال الفضاء ودعم البحث العلمي، ضمن رؤية طموحة لبناء مستقبل قائم على المعرفة والابتكار.',
+        tag_space_crew: 'رواد الفضاء السعوديون',
+        tag_satellites: 'الأقمار الصناعية',
+        proj4_title: 'السعودية الخضراء والاستدامة',
+        proj4_desc: 'التزام بيئي واسع يشمل زراعة مليارات الأشجار، وخفض الانبعاثات الكربونية، وحماية الموارد الطبيعية للأجيال القادمة.',
+        tag_green_saudi: 'مبادرة السعودية الخضراء',
+        tag_energy: 'طاقة متجددة',
+        vision_tag: 'رؤية 2030',
+        vision_title: 'ركائز رؤية المملكة',
+        vision_sub: 'ثلاث ركائز أساسية تشكّل خارطة الطريق نحو مستقبل أكثر ازدهارًا وطموحًا للمملكة العربية السعودية.',
+        pillar1_title: 'مجتمع حيوي',
+        pillar1_desc: 'تعزيز الهوية الوطنية وجودة الحياة، ودعم الرياضة والثقافة والترفيه لبناء مجتمع متكافل وسعيد يفتخر بانتمائه.',
+        pillar2_title: 'اقتصاد مزدهر',
+        pillar2_desc: 'تنويع مصادر الدخل، وتمكين القطاع الخاص، وجذب الاستثمارات المحلية والعالمية لبناء اقتصاد قوي ومستدام.',
+        pillar3_title: 'وطن طموح',
+        pillar3_desc: 'حوكمة فاعلة وشفافة، ومسؤولية مجتمعية راسخة، ترسّخ مكانة المملكة وتدعم تطلعاتها الطموحة إقليميًا وعالميًا.',
+        quiz_tag: 'تحدي المعلومات',
+        quiz_title: 'اختبر معلوماتك عن رؤية 2030 والمملكة',
+        quiz_sub: 'أجب عن الأسئلة التالية واكتشف مدى معرفتك بمشاريع وإنجازات وطننا الغالي.',
+        card_tag: 'بطاقتك الخاصة',
+        card_title: 'اصنع بطاقة تهنئة وطنية باسمك',
+        card_sub: 'اكتب اسمك أدناه، وسنجهّز لك بطاقة تهنئة بمناسبة اليوم الوطني السعودي يمكنك حفظها ومشاركتها فورًا.',
+        card_input_label: 'اكتب اسمك هنا',
+        card_btn_gen: 'تحديث وتصميم البطاقة',
+        card_hint: 'سيتم تحديث المعاينة الحية للبطاقة فور إدخال اسمك.',
+        card_kicker: 'كل عام وأنتم بخير',
+        card_line: 'بمناسبة اليوم الوطني السعودي',
+        card_tagline: 'نحلم ونحقق — رؤية وطن 2030',
+        card_btn_download: 'تحميل البطاقة كصورة',
+        feedback_tag: 'شاركنا رأيك',
+        feedback_title: 'تقييم الموقع وملاحظاتك',
+        feedback_sub: 'نسعد بتقييمك لتجربتك في الموقع، حيث تُرسل ملاحظاتك مباشرة لتطوير المشروع.',
+        fb_name_label: 'الاسم الكريم',
+        fb_email_label: 'البريد الإلكتروني',
+        fb_msg_label: 'الرسالة أو الملاحظات',
+        fb_submit_btn: 'إرسال التقييم للمطور',
+        footer_credit: 'تصميم وتطوير: أحمد اليافعي | Y10',
+        footer_copy: '© جميع الحقوق محفوظة — رؤية وطن 2030',
+        footer_note: 'صُنع بفخر احتفاءً باليوم الوطني السعودي 🇸🇦'
+      },
+      en: {
+        brand_title: 'Vision الوطن <span class="accent">2030</span>',
+        nav_home: 'Home',
+        nav_quotes: 'Quotes',
+        nav_events: 'Countdown',
+        nav_achievements: 'Achievements',
+        nav_vision: 'Vision 2030',
+        nav_quiz: 'Quiz',
+        nav_card: 'Greeting Card',
+        nav_feedback: 'Feedback',
+        hero_badge1: 'Comprehensive School Project',
+        hero_badge2: 'Saudi National Day · Sept 23',
+        hero_title1: 'We Dream',
+        hero_title_and: '&',
+        hero_title2: 'We Achieve',
+        hero_sub: 'Celebrating Saudi National Day, we showcase major achievements and Vision 2030 milestones turning dreams into reality.',
+        stat_vision: 'Kingdom Vision',
+        stat_projects: 'Mega Projects',
+        stat_pillars: 'Vision Pillars',
+        btn_explore: 'Explore Achievements',
+        btn_card: 'Create Greeting Card',
+        quotes_tag: 'Wise Leadership',
+        quotes_title: 'Timeless Quotes',
+        quotes_sub: 'Inspiring words from Saudi leaders who laid the foundation of glory and prosperity.',
+        quote1_text: 'I rely on Allah and on the determination of my fellow citizens to preserve security, prosperity, and build a bright future.',
+        quote1_author: 'King Abdulaziz Al Saud',
+        quote1_title: 'Founder of Saudi Arabia',
+        quote2_text: 'My primary concern is to serve the Saudi citizen and provide a dignified life, anchored in our deep-rooted values.',
+        quote2_author: 'King Salman bin Abdulaziz',
+        quote2_title: 'Custodian of the Two Holy Mosques',
+        quote3_text: 'Our ambition is the sky until we find a place for everyone.. There is no room for hesitation in building this great future.',
+        quote3_author: 'Crown Prince Mohammed bin Salman',
+        quote3_title: 'Prime Minister & Crown Prince',
+        countdown_tag: 'Future Milestones',
+        countdown_title: 'Countdown to Major Events',
+        countdown_sub: 'Track the remaining time for upcoming national and global events hosted in the Kingdom.',
+        event1_title: 'Next Saudi National Day',
+        event2_title: 'Riyadh Expo 2030',
+        event3_title: 'FIFA World Cup Saudi Arabia 2034',
+        timer_days: 'Days',
+        timer_hours: 'Hours',
+        timer_mins: 'Minutes',
+        timer_secs: 'Seconds',
+        ach_tag: 'Kingdom Achievements',
+        ach_title: 'Milestones Shaping the Future',
+        ach_sub: 'From futuristic cities to AI and space, explore the core areas reflecting Saudi ambition.',
+        proj1_title: 'Future Mega Projects',
+        proj1_desc: 'Gigantic projects redefining urbanism, tourism, and investment, placing the Kingdom on the map of global innovation.',
+        tag_neom: 'NEOM',
+        tag_line: 'The Line',
+        tag_qiddiya: 'Qiddiya',
+        tag_murabba: 'New Murabba',
+        proj2_title: 'Digital Transformation & AI',
+        proj2_desc: 'Integrated digital ecosystem easing citizen life and positioning Saudi Arabia at the forefront of AI adoption.',
+        tag_absher: 'Absher',
+        tag_tawakkalna: 'Tawakkalna',
+        tag_sdaia: 'SDAIA',
+        tag_ai: 'Artificial Intelligence',
+        proj3_title: 'Space Exploration & Science',
+        proj3_desc: 'Qualitative steps in space and scientific research within an ambitious vision to build a knowledge-based economy.',
+        tag_space_crew: 'Saudi Astronauts',
+        tag_satellites: 'Satellites',
+        proj4_title: 'Green Saudi & Sustainability',
+        proj4_desc: 'Broad environmental commitment including planting billions of trees, reducing carbon emissions, and protecting natural resources.',
+        tag_green_saudi: 'Saudi Green Initiative',
+        tag_energy: 'Renewable Energy',
+        vision_tag: 'Vision 2030',
+        vision_title: 'Pillars of the Vision',
+        vision_sub: 'Three core pillars shaping the roadmap toward a prosperous and ambitious future for Saudi Arabia.',
+        pillar1_title: 'Vibrant Society',
+        pillar1_desc: 'Promoting national identity, quality of life, sports, and culture to build a happy, cohesive society.',
+        pillar2_title: 'Thriving Economy',
+        pillar2_desc: 'Diversifying income, empowering the private sector, and attracting local and global investments.',
+        pillar3_title: 'Ambitious Nation',
+        pillar3_desc: 'Effective governance, transparency, and robust social responsibility reinforcing the Kingdom global standing.',
+        quiz_tag: 'Knowledge Challenge',
+        quiz_title: 'Test Your Knowledge on Vision 2030',
+        quiz_sub: 'Answer the following questions and discover your familiarity with Saudi mega projects and achievements.',
+        card_tag: 'Your Custom Card',
+        card_title: 'Create a National Greeting Card',
+        card_sub: 'Type your name below to instantly generate a personalized Saudi National Day greeting card.',
+        card_input_label: 'Type your name here',
+        card_btn_gen: 'Update & Design Card',
+        card_hint: 'The live card preview updates instantly as you type your name.',
+        card_kicker: 'Happy National Day',
+        card_line: 'Celebrating Saudi National Day',
+        card_tagline: 'We Dream & Achieve — Vision 2030',
+        card_btn_download: 'Download Card Image',
+        feedback_tag: 'Share Your Feedback',
+        feedback_title: 'Website Evaluation & Feedback',
+        feedback_sub: 'We appreciate your feedback to help us continuously improve and develop this project.',
+        fb_name_label: 'Your Name',
+        fb_email_label: 'Email Address',
+        fb_msg_label: 'Feedback or Comments',
+        fb_submit_btn: 'Send Feedback to Developer',
+        footer_credit: 'Designed & Developed by Ahmed Al-Yafai | Y10',
+        footer_copy: '© All Rights Reserved — Vision الوطن 2030',
+        footer_note: 'Made with pride celebrating Saudi National Day 🇸🇦'
+      },
+      ur: {
+        brand_title: 'ویژن وطن <span class="accent">2030</span>',
+        nav_home: 'ہوم',
+        nav_quotes: 'اقوالِ قائدین',
+        nav_events: 'الٹی گنتی',
+        nav_achievements: 'کارنامے',
+        nav_vision: 'ویژن 2030',
+        nav_quiz: 'کوئز',
+        nav_card: 'کارڈ',
+        nav_feedback: 'آراء',
+        hero_badge1: 'جامع اسکول پروجیکٹ',
+        hero_badge2: 'سعودی قومی دن · 23 ستمبر',
+        hero_title1: 'ہم خواب دیکھتے ہیں',
+        hero_title_and: 'اور',
+        hero_title2: 'پورے کرتے ہیں',
+        hero_sub: 'سعودی قومی دن کی خوشی میں، ہم سعودی عرب کے اہم کارناموں اور ویژن 2030 کو اجاگر کرتے ہیں۔',
+        stat_vision: 'مملکت کا ویژن',
+        stat_projects: 'میگا پروجیکٹس',
+        stat_pillars: 'ویژن کے ستون',
+        btn_explore: 'کارنامے دریافت کریں',
+        btn_card: 'اپنا کارڈ بنائیں',
+        quotes_tag: 'حکیمانہ قیادت',
+        quotes_title: 'لازوال اقوال',
+        quotes_sub: 'سعودی قائدین کے دلکش اور حوصلہ افزا الفاظ جنہوں نے اس عظیم وطن کی بنیاد رکھی۔',
+        quote1_text: 'میں اللہ پر اور اپنے شہریوں کے عزم پر بھروسہ کرتا ہوں تاکہ امن، خوشحالی اور اس وطن کا روشن مستقبل بنایا جا سکے۔',
+        quote1_author: 'شاہ عبدالعزیز آل سعود',
+        quote1_title: 'مملکت سعودی عرب کے بانی',
+        quote2_text: 'میری اولین ترجیح سعودی شہری کی خدمت کرنا اور انہیں باوقار زندگی فراہم کرنا ہے۔',
+        quote2_author: 'شاہ سلمان بن عبدالعزیز آل سعود',
+        quote2_title: 'خادم الحرمین الشریفین',
+        quote3_text: 'ہماری امنگیں آسمان کی بلندیوں تک ہیں جب تک ہم سب کے لیے جگہ نہ پا لیں.. اس مستقبل کی تعمیر میں کوئی ہچکچاہٹ نہیں۔',
+        quote3_author: 'شہزادہ محمد بن سلمان آل سعود',
+        quote3_title: 'ولی عہد و وزیراعظم',
+        countdown_tag: 'مستقبل کے سنگ میل',
+        countdown_title: 'بڑے ایونٹس کے لیے الٹی گنتی',
+        countdown_sub: 'مملکت میں ہونے والے آنے والے قومی اور عالمی ایونٹس کا بقیہ وقت دیکھیں۔',
+        event1_title: 'اگلا سعودی قومی دن',
+        event2_title: 'ریاض ایکسپو 2030',
+        event3_title: 'فیفا ورلڈ کپ سعودی عرب 2034',
+        timer_days: 'دن',
+        timer_hours: 'گھنٹے',
+        timer_mins: 'منٹ',
+        timer_secs: 'سیکنڈ',
+        ach_tag: 'مملکت کے کارنامے',
+        ach_title: 'مستقبل سنوارتے سنگ میل',
+        ach_sub: 'مستقبل کے شہروں سے لے کر مصنوعی ذہانت اور خلاء تک، سعودی عزم کے روشن پہلو۔',
+        proj1_title: 'مستقبل کے میگا پروجیکٹس',
+        proj1_desc: 'عظیم الشان منصوبے جو تعمیرات، سیاحت اور سرمایہ کاری کے مستقبل کی نئی تعریف کرتے ہیں۔',
+        tag_neom: 'نیوم',
+        tag_line: 'دی لائن',
+        tag_qiddiya: 'قدیہ',
+        tag_murabba: 'نیا مربع',
+        proj2_title: 'ڈیجیٹل تبدیلی اور AI',
+        proj2_desc: 'ایک مربوط ڈیجیٹل نظام جو شہریوں کی زندگی کو آسان بناتا ہے اور سعودی عرب کو صف اول میں رکھتا ہے۔',
+        tag_absher: 'ابشر',
+        tag_tawakkalna: 'توکلنا',
+        tag_sdaia: 'سدایا',
+        tag_ai: 'مصنوعی ذہانت',
+        proj3_title: 'خلائی تحقیق اور سائنس',
+        proj3_desc: 'علمی اور معلوماتی معاشرے کی تعمیر کے لیے خلائی شعبے میں تاریخی اقدامات۔',
+        tag_space_crew: 'سعودی خلاباز',
+        tag_satellites: 'سیٹلائٹس',
+        proj4_title: 'سبز سعودی عرب اور پائیداری',
+        proj4_desc: 'اربوں درخت لگانے اور کاربن کے اخراج کو کم کرنے پر مشتمل وسیع ماحولیاتی عزم۔',
+        tag_green_saudi: 'سعودی گرین انیشیٹو',
+        tag_energy: 'قابل تجدید توانائی',
+        vision_tag: 'ویژن 2030',
+        vision_title: 'مملکت کے ویژن کے ستون',
+        vision_sub: 'سعودی عرب کے خوشحال اور پرامید مستقبل کے لیے تین بنیادی ستون۔',
+        pillar1_title: 'متحرک معاشرہ',
+        pillar1_desc: 'قومی تشخص، معیار زندگی، کھیلوں اور ثقافت کو فروغ دے کر ایک خوشحال معاشرہ بنانا۔',
+        pillar2_title: 'خوشحال معیشت',
+        pillar2_desc: 'آمدنی کے ذرائع کو متنوع بنانا، نجی شعبے کو بااختیار بنانا اور سرمایہ کاری کو راغب کرنا۔',
+        pillar3_title: 'پُراعتماد وطن',
+        pillar3_desc: 'موثر حکمرانی، شفافیت اور سماجی ذمہ داری جو مملکت کے عالمی مقام کو بلند کرتی ہے۔',
+        quiz_tag: 'معلومات کا چیلنج',
+        quiz_title: 'ویژن 2030 کے بارے میں اپنا علم جانچیں',
+        quiz_sub: 'مندرجہ ذیل سوالات کے جوابات دیں اور میگا پروجیکٹس سے اپنی واقفیت جانچیں۔',
+        card_tag: 'آپ کا حسب ضرورت کارڈ',
+        card_title: 'قومی مبارکباد کا کارڈ بنائیں',
+        card_sub: 'اپنا نام نیچے درج کریں تاکہ فوری طور پر ذاتی نوعیت کا کارڈ تیار ہو سکے۔',
+        card_input_label: 'یہاں اپنا نام درج کریں',
+        card_btn_gen: 'کارڈ اپ ڈیٹ کریں',
+        card_hint: 'جیسے ہی آپ نام لکھیں گے، کارڈ کا پیش منظر خود بخود اپ ڈیٹ ہو جائے گا۔',
+        card_kicker: 'آپ کو یومِ آزادی مبارک ہو',
+        card_line: 'سعودی قومی دن کی تقریب پر',
+        card_tagline: 'ہم خواب دیکھتے ہیں اور پورا کرتے ہیں — ویژن 2030',
+        card_btn_download: 'کارڈ بطور تصویر ڈاؤن لوڈ کریں',
+        feedback_tag: 'اپنی رائے کا اظہار کریں',
+        feedback_title: 'ویBSITE کا جائزہ اور آراء',
+        feedback_sub: 'ہم اس پروجیکٹ کو بہتر بنانے میں آپ کی آراء کا خیرمقدم کرتے ہیں۔',
+        fb_name_label: 'آپ کا نام',
+        fb_email_label: 'ای میل ایڈریس',
+        fb_msg_label: 'پیغام یا تبصرے',
+        fb_submit_btn: 'ڈویلپر کو آراء ارسال کریں',
+        footer_credit: 'ڈیزائن اور ڈیولپمنٹ: أحمد اليافعي | Y10',
+        footer_copy: '© جملہ حقوق محفوظ ہیں — ویژن 2030',
+        footer_note: 'سعودی قومی دن کے جشن میں فخر کے ساتھ بنایا گیا 🇸🇦'
+      },
+      zh: {
+        brand_title: '远景祖国 <span class="accent">2030</span>',
+        nav_home: '首页',
+        nav_quotes: '领袖名言',
+        nav_events: '倒计时',
+        nav_achievements: '成就',
+        nav_vision: '2030愿景',
+        nav_quiz: '知识问答',
+        nav_card: '贺卡',
+        nav_feedback: '评价反馈',
+        hero_badge1: '综合学校项目',
+        hero_badge2: '沙特国庆节 · 9月23日',
+        hero_title1: '我们梦想',
+        hero_title_and: '&',
+        hero_title2: '我们实现',
+        hero_sub: '庆祝沙特国庆节，展示沙特王国的伟大成就与2030愿景里程碑。',
+        stat_vision: '国家愿景',
+        stat_projects: '超级项目',
+        stat_pillars: '三大支柱',
+        btn_explore: '探索成就',
+        btn_card: '制作贺卡',
+        quotes_tag: '英明领导',
+        quotes_title: '不朽名言',
+        quotes_sub: '来自沙特领袖的鼓舞人心的话语，奠定了祖国的辉煌与繁荣。',
+        quote1_text: '我依靠真主以及同胞们的决心来维护安全、繁荣，并为这个自豪的国家建设光明的未来。',
+        quote1_author: '阿卜杜勒阿齐兹国王',
+        quote1_title: '沙特阿拉伯王国创始人',
+        quote2_text: '我首要的关切是服务沙特公民并为其提供有尊严的生活，立足于我们深厚的价值观。',
+        quote2_title: '两圣地监护人',
+        quote2_author: '萨勒曼·本·阿卜杜勒阿齐兹国王',
+        quote3_text: '我们的雄心壮志直冲云霄，直到为每个人找到一席之地.. 在建设伟大未来的道路上容不得犹豫。',
+        quote3_author: '穆罕默德·本·萨勒曼王储',
+        quote3_title: '首相兼王储',
+        countdown_tag: '未来里程碑',
+        countdown_title: '重大活动倒计时',
+        countdown_sub: '追踪王国即将举办的重大国家和全球活动的剩余时间。',
+        event1_title: '下一届沙特国庆节',
+        event2_title: '利雅得世博会 2030',
+        event3_title: '沙特阿拉伯世界杯 2034',
+        timer_days: '天',
+        timer_hours: '小时',
+        timer_mins: '分钟',
+        timer_secs: '秒',
+        ach_tag: '王国成就',
+        ach_title: '塑造未来的成就',
+        ach_sub: '从未来城市到人工智能和太空，探索体现沙特雄心的核心领域。',
+        proj1_title: '未来超级项目',
+        proj1_desc: '重新定义城市规划、旅游和投资未来的宏伟项目，将沙特置于全球创新地图上。',
+        tag_neom: '新未来城 (NEOM)',
+        tag_line: '直线城市',
+        tag_qiddiya: '奇地亚',
+        tag_murabba: '新穆拉巴',
+        proj2_title: '数字转型与人工智能',
+        proj2_desc: '简化公民生活的综合数字生态系统，使沙特走在人工智能应用的前沿。',
+        tag_absher: 'Absher平台',
+        tag_tawakkalna: 'Tawakkalna',
+        tag_sdaia: 'SDAIA数据局',
+        tag_ai: '人工智能',
+        proj3_title: '太空探索与科学研究',
+        proj3_desc: '在雄心勃勃的知识经济愿景下，太空和科研领域迈出质的步伐。',
+        tag_space_crew: '沙特宇航员',
+        tag_satellites: '卫星',
+        proj4_title: '绿色沙特与可持续发展',
+        proj4_desc: '广泛的环境承诺，包括种植数十亿棵树木、减少碳排放和保护自然资源。',
+        tag_green_saudi: '沙特绿色倡议',
+        tag_energy: '可再生能源',
+        vision_tag: '2030愿景',
+        vision_title: '王国愿景支柱',
+        vision_sub: '三大核心支柱，塑造沙特阿拉伯繁荣雄心未来的路线图。',
+        pillar1_title: '充满活力的社会',
+        pillar1_desc: '弘扬国家认同、生活质量、体育和文化，建设一个自豪、凝聚力强的幸福社会。',
+        pillar2_title: '繁荣的经济',
+        pillar2_desc: '多元化收入来源，赋能私营部门，吸引本地和全球投资。',
+        pillar3_title: '雄心勃勃的国家',
+        pillar3_desc: '高效透明的治理与扎实的社会责任，巩固王国的全球地位。',
+        quiz_tag: '知识挑战',
+        quiz_title: '测试您对2030愿景与沙特的了解',
+        quiz_sub: '回答以下问题，测试您对沙特超级项目和成就的熟悉程度。',
+        card_tag: '您的专属贺卡',
+        card_title: '制作国庆贺卡',
+        card_sub: '在下方输入您的名字，即可立即生成并下载沙特国庆节贺卡。',
+        card_input_label: '在此输入您的名字',
+        card_btn_gen: '更新并设计贺卡',
+        card_hint: '输入名字时，实时预览将自动更新。',
+        card_kicker: '祝您国庆节快乐',
+        card_line: '值此沙特国庆节之际',
+        card_tagline: '我们梦想 & 我们实现 — 2030愿景',
+        card_btn_download: '下载贺卡图片',
+        feedback_tag: '分享您的意见',
+        feedback_title: '网站评价与反馈',
+        feedback_sub: '我们感谢您的反馈，这有助于我们持续改进和开发该项目。',
+        fb_name_label: '您的姓名',
+        fb_email_label: '电子邮件地址',
+        fb_msg_label: '反馈或建议',
+        fb_submit_btn: '向开发者发送反馈',
+        footer_credit: '设计与开发：Ahmed Al-Yafai | Y10',
+        footer_copy: '© 版权所有 — 远景祖国 2030',
+        footer_note: '自豪地为庆祝沙特国庆节而制作 🇸🇦'
+      }
+    };
+
+    const langSelect = document.getElementById('langSelect');
+    const htmlRoot = document.getElementById('htmlRoot');
+
+    function setLanguage(lang) {
+      const rtlLangs = ['ar', 'ur'];
+      const dir = rtlLangs.includes(lang) ? 'rtl' : 'ltr';
+      htmlRoot.setAttribute('dir', dir);
+      htmlRoot.setAttribute('lang', lang);
+
+      const dictionary = translations[lang] || translations.ar;
+
+      document.querySelectorAll('[data-i18n]').forEach(el => {
+        const key = el.getAttribute('data-i18n');
+        if (dictionary[key]) {
+          el.innerHTML = dictionary[key];
+        }
+      });
+
+      renderQuizQuestion();
+      drawGreetingCard();
+    }
+
+    langSelect.addEventListener('change', (e) => {
+      setLanguage(e.target.value);
+    });
+
+    /* Mobile Navbar Toggle */
+    const navToggle = document.getElementById('navToggle');
+    const mainNav = document.getElementById('mainNav');
+
+    navToggle.addEventListener('click', () => {
+      mainNav.classList.toggle('open');
+    });
+
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', () => {
+        mainNav.classList.remove('open');
+      });
+    });
+
+    /* Live Countdown Timers Engine */
+    function updateCountdowns() {
+      const now = new Date().getTime();
+
+      const currentYear = new Date().getFullYear();
+      let ndDate = new Date(`Sept 23, ${currentYear} 00:00:00`).getTime();
+      if (now > ndDate) {
+        ndDate = new Date(`Sept 23, ${currentYear + 1} 00:00:00`).getTime();
+      }
+
+      const expoDate = new Date('Oct 1, 2030 00:00:00').getTime();
+      const wcDate = new Date('June 1, 2034 00:00:00').getTime();
+
+      function updateTimerDisplay(elementId, targetTime) {
+        const container = document.getElementById(elementId);
+        if (!container) return;
+
+        const diff = targetTime - now;
+
+        if (diff <= 0) {
+          container.querySelector('.days').textContent = '00';
+          container.querySelector('.hours').textContent = '00';
+          container.querySelector('.minutes').textContent = '00';
+          container.querySelector('.seconds').textContent = '00';
+          return;
+        }
+
+        const d = Math.floor(diff / (1000 * 60 * 60 * 24));
+        const h = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const m = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        const s = Math.floor((diff % (1000 * 60)) / 1000);
+
+        container.querySelector('.days').textContent = String(d).padStart(2, '0');
+        container.querySelector('.hours').textContent = String(h).padStart(2, '0');
+        container.querySelector('.minutes').textContent = String(m).padStart(2, '0');
+        container.querySelector('.seconds').textContent = String(s).padStart(2, '0');
+      }
+
+      updateTimerDisplay('timerNationalDay', ndDate);
+      updateTimerDisplay('timerExpo', expoDate);
+      updateTimerDisplay('timerWorldCup', wcDate);
+    }
+
+    setInterval(updateCountdowns, 1000);
+    updateCountdowns();
+
+    /* Interactive Quiz Engine */
+    const quizData = {
+      ar: [
+        { q: "في أي عام تم إطلاق رؤية المملكة 2030؟", options: ["2014", "2016", "2018", "2020"], answer: 1 },
+        { q: "ما هو المشروع المستقبلي العملاق الواقع شمال غرب المملكة؟", options: ["القدية", "نيوم", "مربع الرياض", "العلا"], answer: 1 },
+        { q: "كم عدد الركائز الأساسية التي تقوم عليها رؤية 2030؟", options: ["ركيزتان", "3 ركائز", "4 ركائز", "5 ركائز"], answer: 1 },
+        { q: "ما هي المبادرة البيئية الوطنية التي تهدف لزراعة مليارات الأشجار؟", options: ["السعودية الخضراء", "استدامة", "رياض الخضراء", "نقاء"], answer: 0 },
+        { q: "في أي عام ستستضيف العاصمة الرياض معرض إكسبو الدولي؟", options: ["2028", "2030", "2032", "2034"], answer: 1 }
+      ],
+      en: [
+        { q: "In which year was Saudi Vision 2030 launched?", options: ["2014", "2016", "2018", "2020"], answer: 1 },
+        { q: "What is the mega futuristic project located in northwest Saudi Arabia?", options: ["Qiddiya", "NEOM", "New Murabba", "AlUla"], answer: 1 },
+        { q: "How many main pillars form the foundation of Vision 2030?", options: ["2 Pillars", "3 Pillars", "4 Pillars", "5 Pillars"], answer: 1 },
+        { q: "Which national initiative aims to plant billions of trees?", options: ["Saudi Green Initiative", "Istidama", "Green Riyadh", "Naqa"], answer: 0 },
+        { q: "In which year will Riyadh host the World Expo?", options: ["2028", "2030", "2032", "2034"], answer: 1 }
+      ],
+      ur: [
+        { q: "سعودی ویژن 2030 کس سال شروع کیا گیا؟", options: ["2014", "2016", "2018", "2020"], answer: 1 },
+        { q: "مملکت کے شمال مغرب میں واقع میگا مستقبل کا منصوبہ کون سا ہے؟", options: ["قدیہ", "نیوم", "نیا مربع", "العلا"], answer: 1 },
+        { q: "ویژن 2030 کے بنیادی ستون کتنے ہیں؟", options: ["2 ستون", "3 ستون", "4 ستون", "5 ستون"], answer: 1 },
+        { q: "اربوں درخت لگانے کا قومی ماحولیاتی منصوبہ کون سا ہے؟", options: ["سعودی گرین انیشیٹو", "استدامت", "گرین ریاض", "نقاء"], answer: 0 },
+        { q: "ریاض کس سال ورلڈ ایکسپو کی میزبانی کرے گا؟", options: ["2028", "2030", "2032", "2034"], answer: 1 }
+      ],
+      zh: [
+        { q: "沙特“2030愿景”是在哪一年发布的？", options: ["2014年", "2016年", "2018年", "2020年"], answer: 1 },
+        { q: "位于沙特西北部的开创性未来超级项目是什么？", options: ["奇地亚 (Qiddiya)", "新未来城 (NEOM)", "新穆拉巴", "埃尔奥拉"], answer: 1 },
+        { q: "2030愿景由几个核心支柱组成？", options: ["2个支柱", "3个支柱", "4个支柱", "5个支柱"], answer: 1 },
+        { q: "旨在种植数十亿棵树的国家环保倡议是什么？", options: ["沙特绿色倡议", "可持续发展", "绿色利雅得", "纯净倡议"], answer: 0 },
+        { q: "首都利雅得将在哪一年举办世界博览会？", options: ["2028年", "2030年", "2032年", "2034年"], answer: 1 }
+      ]
+    };
+
+    let currentQuestionIdx = 0;
+    let quizScore = 0;
+
+    function renderQuizQuestion() {
+      const lang = htmlRoot.getAttribute('lang') || 'ar';
+      const questions = quizData[lang] || quizData.ar;
+      const quizContent = document.getElementById('quizContent');
+      const stepText = document.getElementById('quizStepText');
+      const scoreText = document.getElementById('quizScoreText');
+      const progressBar = document.getElementById('quizProgressBar');
+
+      if (currentQuestionIdx >= questions.length) {
+        progressBar.style.width = '100%';
+        const isAr = lang === 'ar';
+        quizContent.innerHTML = `
+          <div class="quiz-result-box">
+            <h3>🎉 ${isAr ? 'أحسنت! أكملت التحدي بنجاح' : 'Great Job! Quiz Completed'}</h3>
+            <p style="font-size: 1.2rem; margin-bottom: 1.5rem; color: var(--text-muted);">
+              ${isAr ? 'درجتك النهائية:' : 'Your Final Score:'} <strong style="color: var(--emerald); font-size: 1.6rem;">${quizScore} / ${questions.length}</strong>
+            </p>
+            <button class="btn btn-primary" onclick="restartQuiz()">${isAr ? 'إعادة التحدي' : 'Try Again'}</button>
+          </div>
+        `;
+        return;
+      }
+
+      const qObj = questions[currentQuestionIdx];
+      const total = questions.length;
+      stepText.textContent = lang === 'ar' ? `السؤال ${currentQuestionIdx + 1} من ${total}` : `Question ${currentQuestionIdx + 1} of ${total}`;
+      scoreText.textContent = lang === 'ar' ? `النتيجة: ${quizScore}` : `Score: ${quizScore}`;
+      progressBar.style.width = `${((currentQuestionIdx) / total) * 100}%`;
+
+      let optionsHTML = qObj.options.map((opt, idx) => `
+        <button class="quiz-option" onclick="handleQuizAnswer(${idx})">${opt}</button>
+      `).join('');
+
+      quizContent.innerHTML = `
+        <div class="quiz-question">${qObj.q}</div>
+        <div class="quiz-options">${optionsHTML}</div>
+      `;
+    }
+
+    function handleQuizAnswer(selectedIdx) {
+      const lang = htmlRoot.getAttribute('lang') || 'ar';
+      const questions = quizData[lang] || quizData.ar;
+      const qObj = questions[currentQuestionIdx];
+      const buttons = document.querySelectorAll('.quiz-option');
+
+      buttons.forEach((btn, idx) => {
+        btn.disabled = true;
+        if (idx === qObj.answer) {
+          btn.classList.add('correct');
+        } else if (idx === selectedIdx) {
+          btn.classList.add('incorrect');
+        }
+      });
+
+      if (selectedIdx === qObj.answer) {
+        quizScore++;
+      }
+
+      setTimeout(() => {
+        currentQuestionIdx++;
+        renderQuizQuestion();
+      }, 1200);
+    }
+
+    function restartQuiz() {
+      currentQuestionIdx = 0;
+      quizScore = 0;
+      renderQuizQuestion();
+    }
+
+    /* Greeting Card HTML Canvas Generator */
+    const nameInput = document.getElementById('nameInput');
+    const greetingName = document.getElementById('greetingName');
+    const generateCardBtn = document.getElementById('generateCardBtn');
+    const downloadBtn = document.getElementById('downloadBtn');
+    const canvas = document.getElementById('greetingCanvas');
+
+    function updateCardPreview() {
+      const val = nameInput.value.trim() || 'أحمد اليافعي';
+      greetingName.textContent = val;
+      drawGreetingCard();
+    }
+
+    nameInput.addEventListener('input', updateCardPreview);
+    generateCardBtn.addEventListener('click', updateCardPreview);
+
+    function drawGreetingCard() {
+      if (!canvas) return;
+      const ctx = canvas.getContext('2d');
+      const w = canvas.width;
+      const h = canvas.height;
+      const userName = nameInput.value.trim() || 'أحمد اليافعي';
+
+      // Background Gradient
+      const grad = ctx.createLinearGradient(0, 0, w, h);
+      grad.addColorStop(0, '#064e3b');
+      grad.addColorStop(0.5, '#022c22');
+      grad.addColorStop(1, '#0f172a');
+      ctx.fillStyle = grad;
+      ctx.fillRect(0, 0, w, h);
+
+      // Border frames
+      ctx.strokeStyle = '#f59e0b';
+      ctx.lineWidth = 8;
+      ctx.strokeRect(20, 20, w - 40, h - 40);
+
+      ctx.strokeStyle = 'rgba(245, 158, 11, 0.4)';
+      ctx.lineWidth = 2;
+      ctx.strokeRect(30, 30, w - 60, h - 60);
+
+      // Text Render
+      ctx.textAlign = 'center';
+
+      ctx.fillStyle = '#f59e0b';
+      ctx.font = '600 28px Tajawal, sans-serif';
+      ctx.fillText('كل عام وأنتم بخير', w / 2, 140);
+
+      ctx.fillStyle = '#ffffff';
+      ctx.font = 'bold 54px Tajawal, sans-serif';
+      ctx.fillText(userName, w / 2, 240);
+
+      ctx.fillStyle = 'rgba(255, 255, 255, 0.85)';
+      ctx.font = '500 30px Tajawal, sans-serif';
+      ctx.fillText('بمناسبة اليوم الوطني السعودي', w / 2, 330);
+
+      ctx.fillStyle = '#fbbf24';
+      ctx.font = 'bold 26px Tajawal, sans-serif';
+      ctx.fillText('نحلم ونحقق — رؤية وطن 2030', w / 2, 420);
+
+      ctx.fillStyle = '#10b981';
+      ctx.font = 'bold 22px Tajawal, sans-serif';
+      ctx.fillText('تصميم: Y10', w / 2, 510);
+    }
+
+    downloadBtn.addEventListener('click', () => {
+      drawGreetingCard();
+      const link = document.createElement('a');
+      link.download = `Saudi_National_Day_Card_${nameInput.value.trim() || 'Card'}.png`;
+      link.href = canvas.toDataURL('image/png');
+      link.click();
+    });
+
+    /* Star Rating & Feedback Form System */
+    const starBtns = document.querySelectorAll('.star-btn');
+    const ratingInput = document.getElementById('ratingInput');
+    const feedbackForm = document.getElementById('feedbackForm');
+    const feedbackAlert = document.getElementById('feedbackAlert');
+
+    starBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const val = parseInt(btn.getAttribute('data-value'), 10);
+        ratingInput.value = val;
+
+        starBtns.forEach(sb => {
+          const sbVal = parseInt(sb.getAttribute('data-value'), 10);
+          if (sbVal <= val) {
+            sb.classList.add('active');
+          } else {
+            sb.classList.remove('active');
+          }
+        });
+      });
+    });
+
+    feedbackForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      const name = document.getElementById('fbName').value;
+      const lang = htmlRoot.getAttribute('lang') || 'ar';
+
+      feedbackAlert.className = 'feedback-alert success';
+      feedbackAlert.textContent = lang === 'ar' 
+        ? `شكراً لك ${name}! تم إرسال تقييمك وملاحظاتك بنجاح للمطور.`
+        : `Thank you ${name}! Your feedback has been successfully submitted.`;
+
+      feedbackForm.reset();
+      ratingInput.value = 5;
+      starBtns.forEach(sb => sb.classList.add('active'));
+
+      setTimeout(() => {
+        feedbackAlert.style.display = 'none';
+      }, 5000);
+    });
+
+    // Initialize state
+    renderQuizQuestion();
+    drawGreetingCard();
+  </script>
+</body>
+</html>
